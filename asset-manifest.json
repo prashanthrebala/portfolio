@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.073c9b0a.css",
-    "main.js": "/portfolio/static/js/main.bab727d5.js",
+    "main.js": "/portfolio/static/js/main.d21b06aa.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/prashanth_rebala.jpg": "/portfolio/static/media/prashanth_rebala.6e5a505b309b323bbac2.jpg",
     "index.html": "/portfolio/index.html",
     "main.073c9b0a.css.map": "/portfolio/static/css/main.073c9b0a.css.map",
-    "main.bab727d5.js.map": "/portfolio/static/js/main.bab727d5.js.map",
+    "main.d21b06aa.js.map": "/portfolio/static/js/main.d21b06aa.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.bab727d5.js"
+    "static/js/main.d21b06aa.js"
   ]
 }
