@@ -12,10 +12,6 @@ import {
 
 export const WorkCard = (props: any) => {
 	const { company, description, skills, dates, duration, title } = props;
-	const [collapsed, setCollapsed] = React.useState(false);
-	const handleCollapse = () => {
-		setCollapsed(!collapsed);
-	};
 
 	return (
 		// import microsoft from "../Assets/microsoft-logo.webp";
@@ -32,8 +28,7 @@ export const WorkCard = (props: any) => {
 				color: "#dcdde1",
 				minWidth: "20rem",
 				margin: "0rem 0.5rem",
-				// minHeight: "13rem",
-				maxHeight: collapsed ? "13rem" : "auto",
+				minHeight: "13rem",
 			}}
 		>
 			<CardContent
@@ -65,7 +60,7 @@ export const WorkCard = (props: any) => {
 						{duration}
 					</Typography>
 				</Stack>
-				<Box sx={{ overflow: "hidden" }}>
+				<Box>
 					{description.map((item: string) => {
 						return (
 							<Typography variant="body2" color="#A6A6A6">
@@ -75,15 +70,6 @@ export const WorkCard = (props: any) => {
 					})}
 				</Box>
 			</CardContent>
-			<Box
-				onClick={handleCollapse}
-				sx={{
-					backgroundImage:
-						"linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 12, 13, 1))",
-				}}
-			>
-				View More
-			</Box>
 			<Box
 				sx={{ marginTop: "auto", display: "flex", flexWrap: "wrap", p: 1.5 }}
 			>
