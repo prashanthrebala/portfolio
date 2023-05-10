@@ -35,7 +35,7 @@ export const work_experience = {
 			description: [
 				"Migrated MileIQ's data aggregation process to Azure Event Hubs, resulting in significant increase in the efficiency and real-time processing of user's drives.",
 			],
-			skills: ["Python", "Django", "Express"],
+			skills: ["Python", "Django", "Express", "MySQL"],
 			image: microsoft,
 		},
 		{
@@ -47,7 +47,7 @@ export const work_experience = {
 			description: [
 				"Developed an e-receipt parser for Spend, which was seamlessly integrated as an Outlook mailbox extension, allowing users to conveniently record expenses directly from their mailbox.",
 			],
-			skills: ["Python", "Django", "NLP"],
+			skills: ["Python", "Django", "NLP", "Graph API"],
 			image: microsoft,
 		},
 		{
@@ -60,7 +60,7 @@ export const work_experience = {
 				"Contributed to the development of the visual analytics panel for the company's website, providing powerful data-driven insights for stakeholders.",
 				"Built a resume parser to streamline the hiring process for companies, resulting in improved efficiency and a more seamless experience for both applicants and recruiters.",
 			],
-			skills: ["Python", "Javascript"],
+			skills: ["Python", "Javascript", "NLP"],
 			image: darwinbox,
 		},
 	],
