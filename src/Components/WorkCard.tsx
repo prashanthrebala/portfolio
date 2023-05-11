@@ -1,102 +1,107 @@
 import React from "react";
-import {
-	Card,
-	CardContent,
-	Typography,
-	Chip,
-	Divider,
-	Stack,
-	Box,
-	Button,
-} from "@mui/material";
+import { Typography, Chip, Divider, Stack, Box, Grid } from "@mui/material";
 
 export const WorkCard = (props: any) => {
-	const { company, description, skills, dates, duration, title } = props;
-	const [collapsed, setCollapsed] = React.useState(false);
-	const handleCollapse = () => {
-		setCollapsed(!collapsed);
-	};
+	const { company, description, skills, dates, duration, title, image } = props;
 
 	return (
-		// import microsoft from "../Assets/microsoft-logo.webp";
-		// <Card
-		// 	sx={{
-		// 		backgroundImage: `url(${microsoft})`,
-		// 		backgroundRepeat: "no-repeat",
-		// 		backgroundSize: "cover",
-		// 	}}
-		// >
-		<Card
+		<Grid
+			container
+			direction={{ xs: "column", lg: "row" }}
+			height={"80vh"}
+			justifyContent={"space-evenly"}
 			sx={{
-				backgroundColor: "#0C0C0D",
-				color: "#dcdde1",
-				minWidth: "20rem",
-				margin: "0rem 0.5rem",
-				// minHeight: "13rem",
-				maxHeight: collapsed ? "13rem" : "auto",
+				backgroundColor: "rgba(20, 143, 140, 0.8)",
+				p: 2,
+				borderRadius: "2rem",
 			}}
 		>
-			<CardContent
+			<Grid
+				item
+				xs={6}
 				sx={{
-					color: "#A6A6A6",
-					display: "flex",
-					flexDirection: "column",
-					minHeight: "13rem",
+					background: `url(${image})`,
+					backgroundRepeat: "no-repeat",
+					backgroundPosition: "center",
 				}}
+			/>
+			<Grid
+				item
+				xs={6}
+				display={"flex"}
+				flexDirection={"column"}
+				justifyContent={{ xs: "flex-start", md: "center" }}
+				p={1}
 			>
-				<Typography variant="h5">{company}</Typography>
-				<Typography sx={{ fontSize: "1rem" }}>{title}</Typography>
-				<Stack
-					direction="row"
-					divider={
-						<Divider
-							orientation="vertical"
-							flexItem
-							sx={{ bgcolor: "grey" }}
-							light
-						/>
-					}
-					spacing={1}
+				<Grid
+					container
+					sx={{
+						height: "8rem",
+						color: "black",
+						flexDirection: "column",
+						justifyContent: "center",
+						alignItems: "center",
+					}}
 				>
-					<Typography variant="body2" color={"grey"}>
-						{dates}
-					</Typography>
-					<Typography variant="body2" color={"grey"}>
-						{duration}
-					</Typography>
-				</Stack>
-				<Box sx={{ overflow: "hidden" }}>
-					{description.map((item: string) => {
+					<Typography variant="h3">{company}</Typography>
+					<Typography variant="body1">{title}</Typography>
+					<Stack
+						direction="row"
+						divider={
+							<Divider
+								orientation="vertical"
+								flexItem
+								sx={{ bgcolor: "grey" }}
+								light
+							/>
+						}
+						spacing={1}
+					>
+						<Typography variant="body1" color={"black"}>
+							{dates}
+						</Typography>
+						<Typography variant="body1" color={"black"}>
+							{duration}
+						</Typography>
+					</Stack>
+				</Grid>
+				<Divider flexItem sx={{ bgcolor: "grey" }} light />
+				<Box
+					sx={{ overflow: "hidden", padding: "1rem 2rem", color: "black" }}
+					textAlign={"justify"}
+				>
+					{description.map((item: string, idx: number) => {
 						return (
-							<Typography variant="body2" color="#A6A6A6">
+							<Typography key={idx} variant="body2">
 								{item}
 							</Typography>
 						);
 					})}
 				</Box>
-			</CardContent>
-			<Box
-				onClick={handleCollapse}
-				sx={{
-					backgroundImage:
-						"linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 12, 13, 1))",
-				}}
-			>
-				View More
-			</Box>
-			<Box
-				sx={{ marginTop: "auto", display: "flex", flexWrap: "wrap", p: 1.5 }}
-			>
-				{skills.map((skill: string, idx: number) => {
-					return (
-						<Chip
-							key={idx}
-							label={skill}
-							sx={{ m: "0.2rem", backgroundColor: "black", color: "#A6A6A6" }}
-						></Chip>
-					);
-				})}
-			</Box>
-		</Card>
+				<Box
+					sx={{ padding: "0 2rem" }}
+					display={{ xs: "none", md: "flex" }}
+					justifyContent={"center"}
+					alignItems={"center"}
+					flexWrap={"wrap"}
+					height={"7rem"}
+				>
+					{skills.map((skill: string, idx: number) => {
+						return (
+							<Chip
+								key={idx}
+								label={skill}
+								sx={{
+									color: "#fff",
+									fontSize: "0.9rem",
+									margin: "0 0.25rem",
+									backgroundColor: "#023535",
+								}}
+							></Chip>
+						);
+					})}
+				</Box>
+			</Grid>
+		</Grid>
 	);
 };
