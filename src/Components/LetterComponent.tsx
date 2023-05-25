@@ -25,7 +25,7 @@ export const LetterComponent = ({ letter, animationDuration }: any) => {
 				cursor: "pointer",
 			}}
 			onMouseEnter={() => {
-				setColor("#1B9CFC");
+				setColor("#297EA6");
 			}}
 			onMouseLeave={() => {
 				setColor("#eeeeee");

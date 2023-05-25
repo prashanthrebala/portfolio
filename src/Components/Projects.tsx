@@ -1,6 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import { ProjectItem } from "./ProjectItem";
-import { ParticleBackground } from "./ParticleBackground";
+import scatterBG from "../Assets/polygon-scatter-haikei.svg";
 
 export const Projects = () => {
 	return (
@@ -9,9 +9,13 @@ export const Projects = () => {
 				minHeight={"100vh"}
 				container
 				direction={{ md: "row", xs: "column" }}
-				sx={{ backgroundColor: "rgba(0, 0, 0, 0)", position: "relative" }}
+				sx={{
+					backgroundColor: "rgba(0, 0, 0, 0)",
+					position: "relative",
+					backgroundImage: `url(${scatterBG})`,
+					backgroundSize: "cover",
+				}}
 			>
-				<ParticleBackground />
 				<Grid
 					item
 					xs={2}
