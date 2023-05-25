@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Intro } from "./Components/Intro";
+import { Projects } from "./Components/Projects";
 import { WorkTimeline } from "./Components/WorkTimeline";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
 		<>
 			<Intro />
 			<WorkTimeline />
+			<Projects />
 		</>
 	);
 }
