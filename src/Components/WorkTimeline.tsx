@@ -1,21 +1,24 @@
-import React from "react";
-import { Box, Grid, Typography, Stack, Divider } from "@mui/material";
+import React, { useRef } from "react";
+import { Grid, Typography } from "@mui/material";
 import Timeline from "@mui/lab/Timeline";
-import TimelineItem from "@mui/lab/TimelineItem";
-import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import TimelineConnector from "@mui/lab/TimelineConnector";
-import TimelineContent from "@mui/lab/TimelineContent";
-import TimelineDot from "@mui/lab/TimelineDot";
-import TimelineOppositeContent, {
-	timelineOppositeContentClasses,
-} from "@mui/lab/TimelineOppositeContent";
+import { timelineOppositeContentClasses } from "@mui/lab/TimelineOppositeContent";
 import { work_experience } from "../Content/work_experience";
 import blob_background from "../Assets/blob-haikei.svg";
+import { WorkTimelineItem } from "./WorkTimelineItem";
 
 export const WorkTimeline = () => {
 	const experiences = work_experience.professional;
+	const workExpRef = useRef(null);
+	const [opacity, setOpacity] = React.useState(0);
+	React.useEffect(() => {
+		const timer = setInterval(() => {
+			setOpacity((prevValue) => 1 - prevValue);
+		}, 400);
+		return () => clearInterval(timer);
+	}, []);
 	return (
 		<Grid
+			container
 			sx={{
 				color: "#eee",
 				minHeight: "100vh",
@@ -27,6 +30,7 @@ export const WorkTimeline = () => {
 		>
 			<Grid
 				container
+				item
 				sx={{
 					backgroundImage: `url(${blob_background})`,
 					backgroundSize: "cover",
@@ -53,29 +57,27 @@ export const WorkTimeline = () => {
 						sx={{
 							fontWeight: "bold",
 							padding: "0rem 2rem",
-							textAlign: "center",
+							fontFamily: "Courier New",
 						}}
 					>
-						Work
-					</Typography>
-					<Typography
-						variant="h2"
-						sx={{
-							fontWeight: "bold",
-							padding: "0rem 2rem",
-							textAlign: "center",
-						}}
-					>
-						Experience
+						work experience
+						<div
+							style={{ display: "unset", opacity, transition: "opacity 0.3s" }}
+						>
+							▮
+						</div>
 					</Typography>
 				</Grid>
 			</Grid>
 			<Grid
+				item
+				ref={workExpRef}
 				sx={{
 					backgroundColor: "#0B3317",
 					width: { xs: "100%", md: "70%" },
 					display: "flex",
 					justifyContent: "flex-start",
+					overflowX: "hidden",
 				}}
 			>
 				<Timeline
@@ -86,60 +88,7 @@ export const WorkTimeline = () => {
 					}}
 				>
 					{experiences.map((exp, idx) => {
-						return (
-							<TimelineItem>
-								<TimelineOppositeContent>
-									{exp["dates_short"]}
-								</TimelineOppositeContent>
-								<TimelineSeparator>
-									<TimelineDot />
-									<TimelineConnector />
-								</TimelineSeparator>
-								<TimelineContent>
-									<Typography variant="h5">{exp["company"]}</Typography>
-									<Stack
-										direction="row"
-										divider={
-											<Divider
-												orientation="vertical"
-												flexItem
-												sx={{ bgcolor: "grey" }}
-												light
-											/>
-										}
-										spacing={1}
-									>
-										<Typography variant="body2">{exp["title"]}</Typography>
-										<Typography variant="body2">{exp["duration"]}</Typography>
-									</Stack>
-									<Box
-										sx={{
-											overflow: "hidden",
-											width: "80%",
-											paddingTop: "1rem",
-											paddingBottom: "3rem",
-										}}
-										textAlign={"justify"}
-									>
-										<ul>
-											{exp["description"].map((item: string, idx: number) => {
-												return (
-													<li>
-														<Typography
-															key={idx}
-															variant="body2"
-															sx={{ lineHeight: "1.5rem" }}
-														>
-															{item}
-														</Typography>
-													</li>
-												);
-											})}
-										</ul>
-									</Box>
-								</TimelineContent>
-							</TimelineItem>
-						);
+						return <WorkTimelineItem exp={exp} key={idx} />;
 					})}
 				</Timeline>
 			</Grid>
