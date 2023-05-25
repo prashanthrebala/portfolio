@@ -1,16 +1,20 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.073c9b0a.css",
-    "main.js": "/portfolio/static/js/main.d21b06aa.js",
+    "main.js": "/portfolio/static/js/main.1f24be4b.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/prashanth_rebala.jpg": "/portfolio/static/media/prashanth_rebala.6e5a505b309b323bbac2.jpg",
+    "static/media/microsoft.png": "/portfolio/static/media/microsoft.46a0b13806414f11e65f.png",
+    "static/media/darwinbox.jpg": "/portfolio/static/media/darwinbox.4e539592a29bb4ccec30.jpg",
+    "static/media/polygon-scatter-haikei.svg": "/portfolio/static/media/polygon-scatter-haikei.e433a65982f9141ac00d54e109c372c4.svg",
     "index.html": "/portfolio/index.html",
+    "static/media/blob-haikei.svg": "/portfolio/static/media/blob-haikei.e22bbfb231bd2b90c60a6fde18a735e2.svg",
     "main.073c9b0a.css.map": "/portfolio/static/css/main.073c9b0a.css.map",
-    "main.d21b06aa.js.map": "/portfolio/static/js/main.d21b06aa.js.map",
+    "main.1f24be4b.js.map": "/portfolio/static/js/main.1f24be4b.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.d21b06aa.js"
+    "static/js/main.1f24be4b.js"
   ]
 }
