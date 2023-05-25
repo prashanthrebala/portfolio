@@ -7,6 +7,7 @@ export const work_experience = {
 			company: "Microsoft",
 			title: "Software Engineer 2",
 			dates: "July 2019 to July 2022",
+			dates_short: "Jul '19 to Jul '22",
 			location: "Bangalore, India",
 			duration: "3 years",
 			description: [
@@ -30,6 +31,7 @@ export const work_experience = {
 			company: "Microsoft",
 			title: "Software Engineering Intern",
 			dates: "January 2019 to June 2019",
+			dates_short: "Jan '19 to Jun '19",
 			location: "Bangalore, India",
 			duration: "6 months",
 			description: [
@@ -42,6 +44,7 @@ export const work_experience = {
 			company: "Microsoft",
 			title: "Software Engineering Intern",
 			dates: "May 2018 to July 2018",
+			dates_short: "May '18 to Jul '18",
 			location: "Bangalore, India",
 			duration: "2 months",
 			description: [
@@ -54,6 +57,7 @@ export const work_experience = {
 			company: "Darwinbox",
 			title: "Software Engineering Intern",
 			dates: "April 2017 to June 2017",
+			dates_short: "Apr '17 to Jun '17",
 			location: "Hyderabad, India",
 			duration: "2 months",
 			description: [

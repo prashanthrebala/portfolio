@@ -15,7 +15,7 @@ export const Work = () => {
 		<Box
 			sx={{
 				minHeight: "100vh",
-				bgcolor: "#000",
+				bgcolor: "#124312",
 				color: "#eee",
 				display: "flex",
 				flexDirection: "column",
@@ -32,7 +32,7 @@ export const Work = () => {
 				>
 					Left
 				</Grid>
-				<Grid item xs={12} md={10} display={"flex"} justifyContent={"center"}>
+				<Grid item xs={12} md={8} display={"flex"} justifyContent={"center"}>
 					<Carousel
 						IndicatorIcon={
 							<CircleIcon sx={{ height: "0.5rem", width: "0.5rem" }} />
