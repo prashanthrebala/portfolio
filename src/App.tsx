@@ -1,14 +1,14 @@
 import React from "react";
 import "./App.css";
 import { Intro } from "./Components/Intro";
-import { Work } from "./Components/Work";
 import { Projects } from "./Components/Projects";
+import { WorkTimeline } from "./Components/WorkTimeline";
 
 function App() {
 	return (
 		<>
 			<Intro />
-			<Work />
+			<WorkTimeline />
 			<Projects />
 		</>
 	);
