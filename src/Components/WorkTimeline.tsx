@@ -109,24 +109,33 @@ export const WorkTimeline = () => {
 										}
 										spacing={1}
 									>
-										<Typography variant="body2">{exp["dates"]}</Typography>
+										<Typography variant="body2">{exp["title"]}</Typography>
 										<Typography variant="body2">{exp["duration"]}</Typography>
 									</Stack>
 									<Box
 										sx={{
 											overflow: "hidden",
 											width: "80%",
-											paddingBottom: "4rem",
+											paddingTop: "1rem",
+											paddingBottom: "3rem",
 										}}
 										textAlign={"justify"}
 									>
-										{exp["description"].map((item: string, idx: number) => {
-											return (
-												<Typography key={idx} variant="body2">
-													{item}
-												</Typography>
-											);
-										})}
+										<ul>
+											{exp["description"].map((item: string, idx: number) => {
+												return (
+													<li>
+														<Typography
+															key={idx}
+															variant="body2"
+															sx={{ lineHeight: "1.5rem" }}
+														>
+															{item}
+														</Typography>
+													</li>
+												);
+											})}
+										</ul>
 									</Box>
 								</TimelineContent>
 							</TimelineItem>
