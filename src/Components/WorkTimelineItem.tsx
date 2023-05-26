@@ -8,7 +8,7 @@ import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import { useInView } from "react-intersection-observer";
 
 export const WorkTimelineItem = ({ exp, parentRef }: any) => {
-	const { ref, inView } = useInView({ triggerOnce: true });
+	const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true });
 
 	return (
 		<TimelineItem ref={ref}>
