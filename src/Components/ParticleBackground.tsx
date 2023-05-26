@@ -35,13 +35,13 @@ export const ParticleBackground = () => {
 				},
 				background: {
 					color: {
-						value: "#001829",
+						value: "#013243",
 					},
 				},
 				interactivity: {
 					events: {
 						onClick: {
-							enable: true,
+							enable: false,
 							mode: "push",
 						},
 						onHover: {
@@ -55,7 +55,7 @@ export const ParticleBackground = () => {
 							quantity: 4,
 						},
 						repulse: {
-							distance: 200,
+							distance: 150,
 							duration: 0.4,
 						},
 					},

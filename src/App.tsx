@@ -4,7 +4,7 @@ import { Intro } from "./Components/Intro";
 import { Projects } from "./Components/Projects";
 import { WorkTimeline } from "./Components/WorkTimeline";
 import { Box } from "@mui/material";
-import wave1 from "./Assets/wave-haikei.svg";
+import wave1 from "./Assets/layered-waves.svg";
 
 function App() {
 	return (

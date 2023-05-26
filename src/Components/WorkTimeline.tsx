@@ -32,29 +32,30 @@ export const WorkTimeline = () => {
 				container
 				item
 				sx={{
-					backgroundImage: `url(${blob_background})`,
-					backgroundSize: "cover",
-					minHeight: "inherit",
+					backgroundImage: { md: `url(${blob_background})` },
+					backgroundColor: { xs: "#0B3317" },
+					backgroundSize: { md: "cover" },
+					minHeight: { md: "inherit" },
 					justifyContent: "center",
 					alignItems: "center",
 					width: { xs: "100%", md: "30%" },
-					position: "sticky",
-					top: 0,
-					bottom: 0,
+					position: { md: "sticky" },
+					top: { md: 0 },
+					bottom: { md: 0 },
 				}}
 			>
 				<Grid
 					item
 					sx={{
 						padding: "2rem 0rem",
-						position: "sticky",
-						top: 0,
-						bottom: 0,
+						position: { md: "sticky" },
+						top: { md: 0 },
+						bottom: { md: 0 },
 					}}
 				>
 					<Typography
-						variant="h2"
 						sx={{
+							fontSize: { xs: "2rem", md: "3.5rem" },
 							fontWeight: "bold",
 							padding: "0rem 2rem",
 							fontFamily: "Courier New",

@@ -47,7 +47,10 @@ export const Intro = () => {
 					Hi! I'm
 				</Typography>
 				<Typography
-					sx={{ fontWeight: "bold", fontSize: { md: "3rem", xs: "2rem" } }}
+					sx={{
+						fontSize: { md: "3rem", xs: "2rem" },
+						fontFamily: "League Spartan",
+					}}
 				>
 					{"Prashanth Rebala".split("").map((letter, idx) => (
 						<LetterComponent

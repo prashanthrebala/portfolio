@@ -47,7 +47,7 @@ export const WorkTimelineItem = ({ exp, parentRef }: any) => {
 					<Box
 						sx={{
 							overflow: "hidden",
-							width: "80%",
+							width: { xs: "100%", md: "80%" },
 							paddingTop: "1rem",
 							paddingBottom: "1rem",
 						}}
@@ -80,7 +80,7 @@ export const WorkTimelineItem = ({ exp, parentRef }: any) => {
 											margin: "0.25rem",
 											backgroundColor: "#0B510B",
 										}}
-									></Chip>
+									/>
 								);
 							})}
 						</Box>
