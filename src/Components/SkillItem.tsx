@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import { Box, Typography, Grow } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 
@@ -19,7 +19,7 @@ export const SkillItem = ({ name, icon, index }: any) => {
 			>
 				<Box
 					sx={{
-						background: "radial-gradient(#BFBFBF, #931C1C)",
+						background: "radial-gradient(#BFBFBF, #404040)",
 						borderRadius: "50%",
 						marginBottom: "0.4rem",
 						padding: "2rem",
