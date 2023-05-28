@@ -92,4 +92,46 @@ export const skills = {
 			height: "3rem",
 		},
 	],
+	categories: [
+		{
+			title: "Web Development",
+			items: [
+				"React",
+				"TypeScript",
+				"HTML",
+				"CSS",
+				"JavaScript",
+				"Node.js",
+				"Express",
+			],
+		},
+		{
+			title: "Programming Languages",
+			items: ["Python", "JavaScript", "Java"],
+		},
+		{
+			title: "Databases",
+			items: ["MongoDB", "MySQL"],
+		},
+		{
+			title: "Data Query Languages",
+			items: ["Apollo", "GraphQL"],
+		},
+		{
+			title: "Version Control & Tools",
+			items: ["Git", "GitHub"],
+		},
+		{
+			title: "Testing",
+			items: ["Jest", "Cypress"],
+		},
+		// {
+		// 	title: "CSS Frameworks",
+		// 	items: ["Tailwind CSS", "Bootstrap"]
+		// },
+		// {
+		// 	title: "Backend Frameworks",
+		// 	items: ["Django", "Flask"]
+		// }
+	],
 };

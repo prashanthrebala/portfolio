@@ -2,10 +2,10 @@ import { Box, Paper, Grow } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 
 export const SkillMasonryItem = ({ icon, height }: any) => {
-	const { ref, inView } = useInView({ threshold: 0.6 });
+	const { ref, inView } = useInView({ threshold: 0.3 });
 	return (
 		<Paper
-			sx={{ backgroundColor: "rgba(0, 0, 0, 0)", padding: "0.2rem" }}
+			sx={{ backgroundColor: "#d0d0d0", padding: "0.2rem" }}
 			elevation={1}
 			ref={ref}
 		>
