@@ -1,8 +1,10 @@
 import { Grid, Typography } from "@mui/material";
 import { ProjectItem } from "./ProjectItem";
-import scatterBG from "../Assets/polygon-scatter-haikei.svg";
+import { GitHub } from "./Projects/GitHub";
 
 export const Projects = () => {
+	const projectItemPadding = 2;
+
 	return (
 		<>
 			<Grid
@@ -10,11 +12,11 @@ export const Projects = () => {
 				container
 				direction={{ md: "row", xs: "column" }}
 				sx={{
-					backgroundColor: "rgba(0, 0, 0, 0)",
+					backgroundColor: "#150026",
 					position: "relative",
-					backgroundImage: `url(${scatterBG})`,
 					backgroundSize: "cover",
 				}}
+				padding={projectItemPadding}
 			>
 				<Grid
 					item
@@ -22,6 +24,7 @@ export const Projects = () => {
 					display={"flex"}
 					justifyContent={"center"}
 					alignItems={"center"}
+					overflow={"hidden"}
 					sx={{ backgroundColor: "rgba(#000, 0)", color: "white" }}
 				>
 					<Typography
@@ -41,21 +44,21 @@ export const Projects = () => {
 					display={"flex"}
 				>
 					<Grid container item direction={"column"} md={4} xs={12}>
-						<Grid item md={8} xs={12} padding={1}>
-							<ProjectItem name={"Project 1"} backgroundColor={"#2980b9"} />
+						<Grid item md={8} xs={12} padding={projectItemPadding}>
+							<ProjectItem backgroundColor={"#2980b9"} />
 						</Grid>
-						<Grid item md={4} xs={12} padding={1}>
-							<ProjectItem name={"Project 2"} backgroundColor={"#e67e22"} />
+						<Grid item md={4} xs={12} padding={projectItemPadding}>
+							<ProjectItem backgroundColor={"#e67e22"} />
 						</Grid>
 					</Grid>
 					<Grid container item direction={"column"} md={8} xs={12}>
-						<Grid item md={4} xs={12} padding={1}>
-							<ProjectItem name={"Project 3"} backgroundColor={"#e74c3c"} />
+						<Grid item md={4} xs={12} padding={projectItemPadding}>
+							<ProjectItem backgroundColor={"#e74c3c"} />
 						</Grid>
 
 						<Grid container item md={8} xs={12}>
-							<Grid item md={6} xs={12} padding={1}>
-								<ProjectItem name={"Project 4"} backgroundColor={"#2ecc71"} />
+							<Grid item md={6} xs={12} padding={projectItemPadding}>
+								<ProjectItem backgroundColor={"#2ecc71"} />
 							</Grid>
 							<Grid
 								container
@@ -64,11 +67,11 @@ export const Projects = () => {
 								md={6}
 								xs={12}
 							>
-								<Grid item md={6} xs={12} padding={1}>
-									<ProjectItem name={"Project 5"} backgroundColor={"#9b59b6"} />
+								<Grid item md={6} xs={12} padding={projectItemPadding}>
+									<ProjectItem backgroundColor={"#9b59b6"} />
 								</Grid>
-								<Grid item md={6} xs={12} padding={1}>
-									<ProjectItem name={"Project 6"} backgroundColor={"#2c3e50"} />
+								<Grid item md={6} xs={12} padding={projectItemPadding}>
+									<GitHub />
 								</Grid>
 							</Grid>
 						</Grid>
