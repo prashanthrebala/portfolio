@@ -12,25 +12,25 @@ function App() {
 	return (
 		<>
 			<Intro />
-			<Box
+			{/* <Box
 				sx={{
 					backgroundImage: `url(${wave1})`,
 					width: "100%",
 					height: "200px",
 					margin: "-0.1rem 0rem",
 				}}
-			/>
+			/> */}
 			<WorkTimeline />
-			<Box
+			{/* <Box
 				sx={{
 					backgroundImage: `url(${wave2})`,
 					width: "100%",
 					height: "200px",
 					margin: "-0.1rem 0rem",
 				}}
-			/>
-			<Skills />
+			/> */}
 			<Projects />
+			<Skills />
 		</>
 	);
 }
