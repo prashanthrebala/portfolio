@@ -6,17 +6,28 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import { useInView } from "react-intersection-observer";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export const WorkTimelineItem = ({ exp, parentRef }: any) => {
-	const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true });
+	const theme = useTheme();
+	const mediumScreen = useMediaQuery(theme.breakpoints.up("md"));
+	const { ref, inView } = useInView({
+		threshold: mediumScreen ? 0.5 : 0.2,
+		triggerOnce: true,
+	});
 
 	return (
 		<TimelineItem ref={ref}>
-			<TimelineOppositeContent
-				sx={{ opacity: inView ? 1 : 0, transition: "opacity 0.5s" }}
-			>
-				{exp["dates_short"]}
-			</TimelineOppositeContent>
+			{mediumScreen && (
+				<TimelineOppositeContent
+					sx={{ opacity: inView ? 1 : 0, transition: "opacity 0.5s" }}
+				>
+					{exp["from_date"]} to
+					<br />
+					{exp["to_date"]}
+				</TimelineOppositeContent>
+			)}
 			<TimelineSeparator>
 				<TimelineDot />
 				<TimelineConnector />
@@ -28,7 +39,9 @@ export const WorkTimelineItem = ({ exp, parentRef }: any) => {
 				{...(inView ? { timeout: 500 } : {})}
 			>
 				<TimelineContent>
-					<Typography variant="h5">{exp["company"]}</Typography>
+					<Typography variant="h5" marginBottom={1}>
+						{exp["company"]}
+					</Typography>
 					<Stack
 						direction="row"
 						divider={
@@ -41,33 +54,43 @@ export const WorkTimelineItem = ({ exp, parentRef }: any) => {
 						}
 						spacing={1}
 					>
-						<Typography variant="body2">{exp["title"]}</Typography>
-						<Typography variant="body2">{exp["duration"]}</Typography>
+						<Typography variant="body2" textAlign={"center"}>
+							{exp["title"]}
+						</Typography>
+						{mediumScreen ? (
+							<Typography variant="body2" textAlign={"center"}>
+								{exp["duration"]}
+							</Typography>
+						) : (
+							<Typography variant="body2" textAlign={"center"}>
+								{exp["dates"]}
+							</Typography>
+						)}
 					</Stack>
 					<Box
 						sx={{
 							overflow: "hidden",
 							width: { xs: "100%", md: "80%" },
-							paddingTop: "1rem",
-							paddingBottom: "1rem",
+							paddingY: "1rem",
 						}}
-						textAlign={"justify"}
 					>
-						<ul>
-							{exp["description"].map((item: string, idx: number) => {
-								return (
-									<li>
-										<Typography
-											key={idx}
-											variant="body2"
-											sx={{ lineHeight: "1.5rem" }}
-										>
-											{item}
-										</Typography>
-									</li>
-								);
-							})}
-						</ul>
+						{exp["description"].map((item: string, idx: number) => {
+							return (
+								<>
+									<Typography
+										key={idx}
+										variant="body2"
+										sx={{
+											lineHeight: "1.5rem",
+											marginLeft: "0.8rem",
+											marginY: "0.5rem",
+										}}
+									>
+										{item}
+									</Typography>
+								</>
+							);
+						})}
 						<Box padding={2}>
 							{exp["skills"].map((skill: string, idx: number) => {
 								return (
