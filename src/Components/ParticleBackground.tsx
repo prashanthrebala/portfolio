@@ -35,45 +35,16 @@ export const ParticleBackground = () => {
 				},
 				background: {
 					color: {
-						value: "#013243",
-					},
-				},
-				interactivity: {
-					events: {
-						onClick: {
-							enable: false,
-							mode: "push",
-						},
-						onHover: {
-							enable: true,
-							mode: "repulse",
-						},
-						resize: true,
-					},
-					modes: {
-						push: {
-							quantity: 4,
-						},
-						repulse: {
-							distance: 150,
-							duration: 0.4,
-						},
+						value: "#150026",
 					},
 				},
 				fpsLimit: 60,
 				particles: {
 					color: {
-						value: "#297EA6",
-					},
-					links: {
-						color: "#297EA6",
-						distance: 150,
-						enable: true,
-						opacity: 0.6,
-						width: 0.8,
+						value: "#5D3F6A",
 					},
 					collisions: {
-						enable: true,
+						enable: false,
 					},
 					move: {
 						direction: "none",
@@ -82,27 +53,24 @@ export const ParticleBackground = () => {
 							default: "bounce",
 						},
 						random: false,
-						speed: 2,
-						straight: false,
+						speed: 0.2,
+						straight: true,
 					},
 					number: {
 						density: {
 							enable: true,
 							area: 900,
 						},
-						value: 80,
+						value: 10,
 					},
 					opacity: {
 						value: 0.8,
-					},
-					shape: {
-						type: "polygon",
+						random: true,
 					},
 					size: {
-						value: { min: 1, max: 3 },
+						value: { min: 50, max: 150 },
 					},
 				},
-				detectRetina: true,
 			}}
 		/>
 	);
