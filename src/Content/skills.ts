@@ -19,7 +19,7 @@ export const skills = {
 		{
 			name: "React",
 			icon: react,
-			height: "6rem",
+			height: "5rem",
 		},
 		{
 			name: "NodeJS",
@@ -29,62 +29,62 @@ export const skills = {
 		{
 			name: "MongoDB",
 			icon: mongo,
-			height: "3rem",
+			height: "2rem",
 		},
 		{
 			name: "Express",
 			icon: express,
-			height: "3rem",
+			height: "2rem",
 		},
 		{
 			name: "Typescript",
 			icon: typescript,
-			height: "6rem",
+			height: "4rem",
 		},
 		{
 			name: "HTML",
 			icon: html,
-			height: "6rem",
+			height: "5rem",
 		},
 		{
 			name: "CSS",
 			icon: css,
-			height: "6rem",
+			height: "5rem",
 		},
 		{
 			name: "JavaScript",
 			icon: javascript,
-			height: "6rem",
+			height: "4rem",
 		},
 		{
 			name: "GraphQL",
 			icon: graphql,
-			height: "6rem",
+			height: "5rem",
 		},
 		{
 			name: "Cypress",
 			icon: cypress,
-			height: "6rem",
+			height: "4rem",
 		},
 		{
 			name: "Git",
 			icon: git,
-			height: "6rem",
+			height: "5rem",
 		},
 		{
 			name: "Python",
 			icon: python,
-			height: "6rem",
+			height: "4rem",
 		},
 		{
 			name: "Java",
 			icon: java,
-			height: "6rem",
+			height: "5rem",
 		},
 		{
 			name: "Angular",
 			icon: angular,
-			height: "6rem",
+			height: "4rem",
 		},
 		{
 			name: "MySQL",
@@ -107,7 +107,7 @@ export const skills = {
 		},
 		{
 			title: "Programming Languages",
-			items: ["Python", "JavaScript", "Java"],
+			items: ["JavaScript", "Python", "Java", "C#"],
 		},
 		{
 			title: "Databases",
@@ -117,21 +117,21 @@ export const skills = {
 			title: "Data Query Languages",
 			items: ["Apollo", "GraphQL"],
 		},
+		// {
+		// 	title: "CSS Frameworks",
+		// 	items: ["Tailwind CSS", "Bootstrap"],
+		// },
+		// {
+		// 	title: "Backend Frameworks",
+		// 	items: ["Django", "Flask"],
+		// },
 		{
-			title: "Version Control & Tools",
-			items: ["Git", "GitHub"],
+			title: "Tools",
+			items: ["Docker", "Git", "GitHub"],
 		},
 		{
 			title: "Testing",
 			items: ["Jest", "Cypress"],
 		},
-		// {
-		// 	title: "CSS Frameworks",
-		// 	items: ["Tailwind CSS", "Bootstrap"]
-		// },
-		// {
-		// 	title: "Backend Frameworks",
-		// 	items: ["Django", "Flask"]
-		// }
 	],
 };
