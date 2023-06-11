@@ -78,7 +78,7 @@ export const WorkTimelineItem = ({ exp, parentRef }: any) => {
 											color: "#fff",
 											fontSize: "0.9rem",
 											margin: "0.25rem",
-											backgroundColor: "#0B510B",
+											backgroundColor: "#3c005a",
 										}}
 									/>
 								);

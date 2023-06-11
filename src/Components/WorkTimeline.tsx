@@ -20,6 +20,7 @@ export const WorkTimeline = () => {
 		<Grid
 			container
 			sx={{
+				backgroundColor: "#150026",
 				color: "#eee",
 				minHeight: "100vh",
 				display: "flex",
@@ -32,10 +33,9 @@ export const WorkTimeline = () => {
 				container
 				item
 				sx={{
-					backgroundImage: { md: `url(${blob_background})` },
-					backgroundColor: { xs: "#0B3317" },
-					backgroundSize: { md: "cover" },
 					minHeight: { md: "inherit" },
+					display: "flex",
+					flexDirection: "column",
 					justifyContent: "center",
 					alignItems: "center",
 					width: { xs: "100%", md: "30%" },
@@ -47,17 +47,20 @@ export const WorkTimeline = () => {
 				<Grid
 					item
 					sx={{
+						width: "100%",
 						padding: "2rem 0rem",
 						position: { md: "sticky" },
+						display: "flex",
+						justifyContent: "center",
 						top: { md: 0 },
 						bottom: { md: 0 },
 					}}
 				>
 					<Typography
 						sx={{
-							fontSize: { xs: "2rem", md: "3.5rem" },
+							fontSize: { xs: "2.5em", lg: "3.5em" },
 							fontWeight: "bold",
-							padding: "0rem 2rem",
+							paddingLeft: { md: "1.6em" },
 							fontFamily: "Courier New",
 						}}
 					>
@@ -74,7 +77,6 @@ export const WorkTimeline = () => {
 				item
 				ref={workExpRef}
 				sx={{
-					backgroundColor: "#0B3317",
 					width: { xs: "100%", md: "70%" },
 					display: "flex",
 					justifyContent: "flex-start",
