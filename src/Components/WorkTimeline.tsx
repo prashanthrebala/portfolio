@@ -2,8 +2,8 @@ import React, { useRef } from "react";
 import { Grid, Typography } from "@mui/material";
 import Timeline from "@mui/lab/Timeline";
 import { timelineOppositeContentClasses } from "@mui/lab/TimelineOppositeContent";
+import { timelineItemClasses } from "@mui/lab/TimelineItem";
 import { work_experience } from "../Content/work_experience";
-import blob_background from "../Assets/blob-haikei.svg";
 import { WorkTimelineItem } from "./WorkTimelineItem";
 
 export const WorkTimeline = () => {
@@ -60,16 +60,16 @@ export const WorkTimeline = () => {
 						sx={{
 							fontSize: { xs: "2.5em", lg: "3.5em" },
 							fontWeight: "bold",
-							paddingLeft: { md: "1.6em" },
+							paddingLeft: { xs: "0.8em", md: "1.6em" },
 							fontFamily: "Courier New",
 						}}
 					>
 						work experience
-						<div
+						<span
 							style={{ display: "unset", opacity, transition: "opacity 0.3s" }}
 						>
 							▮
-						</div>
+						</span>
 					</Typography>
 				</Grid>
 			</Grid>
@@ -87,6 +87,10 @@ export const WorkTimeline = () => {
 					sx={{
 						[`& .${timelineOppositeContentClasses.root}`]: {
 							flex: 0.2,
+						},
+						[`& .${timelineItemClasses.root}:before`]: {
+							flex: 0,
+							padding: 1,
 						},
 					}}
 				>
