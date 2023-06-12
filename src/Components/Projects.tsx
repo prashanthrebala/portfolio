@@ -1,12 +1,37 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Alert, Snackbar } from "@mui/material";
 import { ProjectItem } from "./ProjectItem";
 import { GitHub } from "./Projects/GitHub";
+import { useInView } from "react-intersection-observer";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export const Projects = () => {
 	const projectItemPadding = 2;
+	const { ref, inView } = useInView({
+		threshold: 0,
+	});
+	const theme = useTheme();
+	const mediumScreen = useMediaQuery(theme.breakpoints.up("md"));
 
 	return (
 		<>
+			<Snackbar
+				open={inView}
+				anchorOrigin={{ vertical: "top", horizontal: "center" }}
+			>
+				<Alert
+					variant="filled"
+					severity="info"
+					sx={{ boxShadow: 12, width: { xs: "80%", md: "70%" } }}
+				>
+					<Typography variant="body1">
+						Currently under construction! I'm working on implementing suitable
+						designs for this section of my website. Meanwhile, feel free to
+						check out my GitHub. Thank you for your patience!
+					</Typography>
+				</Alert>
+			</Snackbar>
+
 			<Grid
 				minHeight={"100vh"}
 				container
@@ -47,9 +72,11 @@ export const Projects = () => {
 						<Grid item md={8} xs={12} padding={projectItemPadding}>
 							<ProjectItem backgroundColor={"#2980b9"} />
 						</Grid>
-						<Grid item md={4} xs={12} padding={projectItemPadding}>
-							<ProjectItem backgroundColor={"#e67e22"} />
-						</Grid>
+						{mediumScreen && (
+							<Grid item md={4} xs={12} padding={projectItemPadding}>
+								<ProjectItem backgroundColor={"#e67e22"} />
+							</Grid>
+						)}
 					</Grid>
 					<Grid container item direction={"column"} md={8} xs={12}>
 						<Grid item md={4} xs={12} padding={projectItemPadding}>
@@ -57,9 +84,11 @@ export const Projects = () => {
 						</Grid>
 
 						<Grid container item md={8} xs={12}>
-							<Grid item md={6} xs={12} padding={projectItemPadding}>
-								<ProjectItem backgroundColor={"#2ecc71"} />
-							</Grid>
+							{mediumScreen && (
+								<Grid item md={6} xs={12} padding={projectItemPadding}>
+									<ProjectItem backgroundColor={"#2ecc71"} />
+								</Grid>
+							)}
 							<Grid
 								container
 								item
@@ -67,7 +96,13 @@ export const Projects = () => {
 								md={6}
 								xs={12}
 							>
-								<Grid item md={6} xs={12} padding={projectItemPadding}>
+								<Grid
+									ref={ref}
+									item
+									md={6}
+									xs={12}
+									padding={projectItemPadding}
+								>
 									<ProjectItem backgroundColor={"#9b59b6"} />
 								</Grid>
 								<Grid item md={6} xs={12} padding={projectItemPadding}>
