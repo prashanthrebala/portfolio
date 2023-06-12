@@ -29,7 +29,17 @@ export const WorkTimelineItem = ({ exp, parentRef }: any) => {
 				</TimelineOppositeContent>
 			)}
 			<TimelineSeparator>
-				<TimelineDot />
+				<TimelineDot sx={{ backgroundColor: "#dedede" }}>
+					<Box
+						sx={{
+							backgroundImage: `url(${exp["image"]})`,
+							backgroundSize: "contain",
+							backgroundPosition: "cover",
+							height: "1.6em",
+							width: "1.6em",
+						}}
+					/>
+				</TimelineDot>
 				<TimelineConnector />
 			</TimelineSeparator>
 			<Slide

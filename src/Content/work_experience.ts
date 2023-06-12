@@ -1,4 +1,4 @@
-import darwinbox from "../Assets/darwinbox.jpg";
+import darwinbox from "../Assets/darwinbox.png";
 import microsoft from "../Assets/microsoft.png";
 
 export const work_experience = {
