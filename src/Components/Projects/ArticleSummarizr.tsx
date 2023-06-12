@@ -1,6 +1,6 @@
 import { ProjectItem } from "../ProjectItem";
 import { Box, Typography, Grid } from "@mui/material";
-import { AiOutlineGithub, AiFillYoutube } from "react-icons/ai";
+// import { AiOutlineGithub, AiFillYoutube } from "react-icons/ai";
 
 import background from "../../Assets/backgrounds/summarizr.png";
 
@@ -36,7 +36,7 @@ export const ArticleSummarizr = () => {
 					This website utilizes RapidAPI to extract and summarize article
 					content using GPT.
 				</Typography>
-				<Grid
+				{/* <Grid
 					container
 					display={{ xs: "none", md: "flex" }}
 					justifyContent={"center"}
@@ -48,7 +48,7 @@ export const ArticleSummarizr = () => {
 					<Grid item>
 						<AiFillYoutube size={30} color="#5A5A5A" />
 					</Grid>
-				</Grid>
+				</Grid> */}
 			</Box>
 		</ProjectItem>
 	);

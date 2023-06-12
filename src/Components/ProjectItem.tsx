@@ -1,5 +1,7 @@
 import { Paper, Link } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+// import IconButton from "@mui/material/IconButton";
+// import { IoMdMore } from "react-icons/io";
 
 export const ProjectItem = (props: any) => {
 	const { backgroundColor, backgroundImage, children, targetLink } = props;
@@ -25,8 +27,10 @@ export const ProjectItem = (props: any) => {
 					display: "flex",
 					justifyContent: "center",
 					alignItems: "center",
+					// safe to freely increase xs value
 					minHeight: { xs: "20vh", md: "auto" },
 					overflow: "hidden",
+					position: "relative",
 					boxSizing: "border-box",
 					transition: "transform 0.3s",
 					transitionDelay: "0.1s",
@@ -38,6 +42,9 @@ export const ProjectItem = (props: any) => {
 					cursor: "pointer",
 				}}
 			>
+				{/* <IconButton sx={{ position: "absolute", top: 0, right: 0 }}>
+					<IoMdMore color="#DFDFDF" />
+				</IconButton> */}
 				{children}
 			</Paper>
 		</Link>
