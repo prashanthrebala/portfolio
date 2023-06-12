@@ -55,6 +55,7 @@ export const Projects = () => {
 				>
 					<Typography
 						variant="h2"
+						fontFamily={"Permanent Marker"}
 						sx={{
 							transform: { md: "rotate(-90deg)" },
 						}}

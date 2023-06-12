@@ -61,7 +61,7 @@ export const WorkTimeline = () => {
 							fontSize: { xs: "2.5em", lg: "3.5em" },
 							fontWeight: "bold",
 							paddingLeft: { xs: "0.8em", md: "1.6em" },
-							fontFamily: "Courier New",
+							fontFamily: "Courier Prime",
 						}}
 					>
 						work experience
