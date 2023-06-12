@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Grid, Typography, Paper, Divider } from "@mui/material";
+import { Grid, Typography, Paper } from "@mui/material";
 import { Masonry } from "@mui/lab";
 import { SkillMasonryItem } from "./SkillMasonryItem";
 import { skills } from "../Content/skills";
@@ -37,33 +37,43 @@ export const Skills = () => {
 	return (
 		<Grid
 			container
-			sx={{ width: "100%", minHeight: "100vh", backgroundColor: "#f0f0f0" }}
+			sx={{ width: "100%", minHeight: "100vh", backgroundColor: "#150026" }}
 			direction={"column"}
 			gap={1}
 		>
-			<Typography textAlign={"center"} fontFamily={"Nunito"} fontSize={"4rem"}>
-				Skills
+			<Typography
+				textAlign={"center"}
+				fontFamily={"Secular One"}
+				fontSize={{ xs: "2.5em", md: "4em" }}
+				sx={{ color: "#d1ccc0" }}
+				paddingY={3.5}
+			>
+				Techn<span style={{ color: "#993399" }}>i</span>cal Skills
 			</Typography>
 			<Grid
 				container
-				direction={{ xs: "column-reverse", md: "row" }}
-				justifyContent={"space-evenly"}
+				display={"flex"}
+				justifyContent={{ xs: "center", lg: "space-evenly" }}
+				alignItems={{ md: "center" }}
 			>
 				<Grid
 					item
 					ref={masonryRef}
 					margin={3}
 					padding={1}
-					xs={10}
-					md={4}
+					xs={12}
+					sm={9}
+					md={6}
+					lg={4}
 					sx={{
+						display: { xs: "none", md: "block" },
 						maxHeight: "70vh",
 						overflow: "hidden",
 					}}
 					display={"flex"}
 					justifyContent={"center"}
 				>
-					<Masonry columns={3} spacing={3}>
+					<Masonry columns={3} spacing={5}>
 						{tripleArray(skills.skillSet).map((skill, index) => (
 							<SkillMasonryItem
 								name={skill["name"]}
@@ -75,21 +85,42 @@ export const Skills = () => {
 						))}
 					</Masonry>
 				</Grid>
-				<Grid item xs={10} md={4}>
+				<Grid
+					item
+					xs={12}
+					sm={9}
+					md={5}
+					lg={4}
+					display={"flex"}
+					justifyContent={"center"}
+					sx={
+						{
+							// sm
+						}
+					}
+				>
 					<Masonry columns={2} spacing={3}>
 						{skills.categories.map((skill, index) => (
-							<Paper>
+							<Paper
+								key={index}
+								sx={{
+									borderRadius: "1rem",
+									backgroundColor: "#2c2c54",
+									color: "#d1ccc0",
+								}}
+							>
 								<Typography
 									variant="body1"
 									textAlign={"center"}
-									fontSize={"1.2rem"}
+									sx={{ backgroundColor: "#40407a", borderRadius: "1rem" }}
+									fontSize={{ xs: "0.9em", md: "1em" }}
 									p={1}
+									m={1}
 								>
 									{skill.title}
 								</Typography>
-								<Divider />
 								{skill.items.map((item, idx) => (
-									<Typography key={idx} textAlign={"center"}>
+									<Typography margin={1} key={idx} textAlign={"center"}>
 										{item}
 									</Typography>
 								))}
