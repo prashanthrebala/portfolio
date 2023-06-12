@@ -1,7 +1,9 @@
 import { Paper, Link } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 export const ProjectItem = (props: any) => {
 	const { backgroundColor, children, targetLink } = props;
+	const theme = useTheme();
 
 	return (
 		<Link
@@ -23,8 +25,10 @@ export const ProjectItem = (props: any) => {
 					boxSizing: "border-box",
 					transition: "transform 0.3s",
 					transitionDelay: "0.1s",
-					"&:hover": {
-						transform: "scale(1.05)",
+					[theme.breakpoints.up("md")]: {
+						"&:hover": {
+							transform: "scale(1.05)",
+						},
 					},
 					cursor: "pointer",
 				}}
