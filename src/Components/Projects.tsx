@@ -1,5 +1,6 @@
 import { Grid, Typography, Alert, Snackbar } from "@mui/material";
 import { ProjectItem } from "./ProjectItem";
+import { ArticleSummarizr } from "./Projects/ArticleSummarizr";
 import { GitHub } from "./Projects/GitHub";
 import { useInView } from "react-intersection-observer";
 import { useTheme } from "@mui/material/styles";
@@ -8,7 +9,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 export const Projects = () => {
 	const projectItemPadding = 2;
 	const { ref, inView } = useInView({
-		threshold: 0,
+		threshold: 0.2,
 	});
 	const theme = useTheme();
 	const mediumScreen = useMediaQuery(theme.breakpoints.up("md"));
@@ -103,7 +104,7 @@ export const Projects = () => {
 									xs={12}
 									padding={projectItemPadding}
 								>
-									<ProjectItem backgroundColor={"#9b59b6"} />
+									<ArticleSummarizr />
 								</Grid>
 								<Grid item md={6} xs={12} padding={projectItemPadding}>
 									<GitHub />

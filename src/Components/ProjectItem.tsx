@@ -2,7 +2,7 @@ import { Paper, Link } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 export const ProjectItem = (props: any) => {
-	const { backgroundColor, children, targetLink } = props;
+	const { backgroundColor, backgroundImage, children, targetLink } = props;
 	const theme = useTheme();
 
 	return (
@@ -16,6 +16,11 @@ export const ProjectItem = (props: any) => {
 			<Paper
 				sx={{
 					height: "100%",
+					...(backgroundImage && {
+						backgroundImage: `url(${backgroundImage})`,
+						backgroundSize: "cover",
+						backgroundPosition: "top",
+					}),
 					backgroundColor,
 					display: "flex",
 					justifyContent: "center",
