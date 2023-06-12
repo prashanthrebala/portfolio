@@ -1,37 +1,32 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.073c9b0a.css",
-    "main.js": "/portfolio/static/js/main.81e86081.js",
+    "main.css": "/portfolio/static/css/main.8a1d8450.css",
+    "main.js": "/portfolio/static/js/main.79c31d5f.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/prashanth_rebala.jpg": "/portfolio/static/media/prashanth_rebala.6e5a505b309b323bbac2.jpg",
-    "static/media/microsoft.png": "/portfolio/static/media/microsoft.46a0b13806414f11e65f.png",
-    "static/media/darwinbox.jpg": "/portfolio/static/media/darwinbox.4e539592a29bb4ccec30.jpg",
+    "static/media/summarizr.png": "/portfolio/static/media/summarizr.0287428aa60edfabbf93.png",
     "static/media/mongodb.svg": "/portfolio/static/media/mongodb.74da918bb423b2ef1919b8fcc07dcb26.svg",
     "static/media/express.svg": "/portfolio/static/media/express.7e85c5130978e3593e65a44112bc7390.svg",
     "static/media/mysql.svg": "/portfolio/static/media/mysql.88631d0de40f60cec048c5f2549eaf37.svg",
     "static/media/React.svg": "/portfolio/static/media/React.e27571eaed899c642345e71163624ef9.svg",
     "static/media/NodeJS.svg": "/portfolio/static/media/NodeJS.dd47e26ed1d7dddf018e5cbffc40f76d.svg",
-    "static/media/layered-waves.svg": "/portfolio/static/media/layered-waves.7143b96db1e82f9b2d85bd84913c8d8c.svg",
     "static/media/cypress.svg": "/portfolio/static/media/cypress.72627336e095c0927c4ba45b17674531.svg",
-    "static/media/layered-waves-haikei-2.svg": "/portfolio/static/media/layered-waves-haikei-2.d5e00693c4189dfd20ad80cdfd8d8e1e.svg",
     "static/media/graphql.svg": "/portfolio/static/media/graphql.61116f4fcb1318abddc30fd35d9f877d.svg",
     "static/media/java.svg": "/portfolio/static/media/java.83165dfb2f5a7657ce4c73e0ba3cef32.svg",
     "static/media/python.svg": "/portfolio/static/media/python.6a8b2999db46fb931134216e8fdfdb2c.svg",
     "static/media/html-5.svg": "/portfolio/static/media/html-5.e7638e3676622c76a46ece6c46136fd4.svg",
-    "static/media/polygon-scatter-haikei.svg": "/portfolio/static/media/polygon-scatter-haikei.e433a65982f9141ac00d54e109c372c4.svg",
     "static/media/typescript.svg": "/portfolio/static/media/typescript.ff34a1b08013556934e1cc0cf67c5baa.svg",
     "static/media/css-3.svg": "/portfolio/static/media/css-3.e7a9de36d9335d92932e93eb3b32deb9.svg",
     "static/media/git.svg": "/portfolio/static/media/git.fd381642a8b14fec88b8d6df1ff25220.svg",
     "static/media/javascript.svg": "/portfolio/static/media/javascript.fd46ca41839433d73577989d86eb2fe2.svg",
-    "index.html": "/portfolio/index.html",
     "static/media/angular.svg": "/portfolio/static/media/angular.e185415c50bc1885eed6c6cc9d2b009e.svg",
-    "static/media/blob-haikei.svg": "/portfolio/static/media/blob-haikei.e22bbfb231bd2b90c60a6fde18a735e2.svg",
-    "main.073c9b0a.css.map": "/portfolio/static/css/main.073c9b0a.css.map",
-    "main.81e86081.js.map": "/portfolio/static/js/main.81e86081.js.map",
+    "index.html": "/portfolio/index.html",
+    "main.8a1d8450.css.map": "/portfolio/static/css/main.8a1d8450.css.map",
+    "main.79c31d5f.js.map": "/portfolio/static/js/main.79c31d5f.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.81e86081.js"
+    "static/css/main.8a1d8450.css",
+    "static/js/main.79c31d5f.js"
   ]
 }
