@@ -4,7 +4,14 @@ import { useTheme } from "@mui/material/styles";
 // import { IoMdMore } from "react-icons/io";
 
 export const ProjectItem = (props: any) => {
-	const { backgroundColor, backgroundImage, children, targetLink } = props;
+	const {
+		backgroundColor,
+		backgroundImage,
+		backgroundPosition,
+		backgroundSize,
+		children,
+		targetLink,
+	} = props;
 	const theme = useTheme();
 
 	return (
@@ -19,9 +26,9 @@ export const ProjectItem = (props: any) => {
 				sx={{
 					height: "100%",
 					...(backgroundImage && {
-						backgroundImage: `url(${backgroundImage})`,
-						backgroundSize: "cover",
-						backgroundPosition: "top",
+						backgroundImage,
+						backgroundSize,
+						backgroundPosition,
 					}),
 					backgroundColor,
 					display: "flex",

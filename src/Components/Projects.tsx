@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Grid, Typography, Alert, Snackbar } from "@mui/material";
 import { ProjectItem } from "./ProjectItem";
+import { HandJutsu } from "./Projects/HandJutsu";
 import { ArticleSummarizr } from "./Projects/ArticleSummarizr";
 import { GitHub } from "./Projects/GitHub";
 import { useInView } from "react-intersection-observer";
@@ -9,16 +11,23 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 export const Projects = () => {
 	const projectItemPadding = 2;
 	const { ref, inView } = useInView({
-		threshold: 0.2,
+		// threshold: 0.2,
 	});
 	const theme = useTheme();
 	const mediumScreen = useMediaQuery(theme.breakpoints.up("md"));
+	const [snackbarOpen, setSnackbarOpen] = useState(true);
+
+	const handleCloseSnackbar = () => {
+		setSnackbarOpen(false);
+	};
 
 	return (
 		<>
 			<Snackbar
-				open={inView}
+				open={snackbarOpen && inView}
 				anchorOrigin={{ vertical: "top", horizontal: "center" }}
+				autoHideDuration={6000}
+				onClose={handleCloseSnackbar}
 			>
 				<Alert
 					variant="filled"
@@ -74,11 +83,10 @@ export const Projects = () => {
 						<Grid item md={8} xs={12} padding={projectItemPadding}>
 							<ProjectItem backgroundColor={"#2980b9"} />
 						</Grid>
-						{mediumScreen && (
-							<Grid item md={4} xs={12} padding={projectItemPadding}>
-								<ProjectItem backgroundColor={"#e67e22"} />
-							</Grid>
-						)}
+
+						<Grid item md={4} xs={12} padding={projectItemPadding}>
+							<HandJutsu />
+						</Grid>
 					</Grid>
 					<Grid container item direction={"column"} md={8} xs={12}>
 						<Grid item md={4} xs={12} padding={projectItemPadding}>
