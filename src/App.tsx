@@ -4,6 +4,7 @@ import { Intro } from "./Components/Intro";
 import { Projects } from "./Components/Projects";
 import { WorkTimeline } from "./Components/WorkTimeline";
 import { Skills } from "./Components/Skills";
+import { ComingSoon } from "./Components/ComingSoon";
 import { Box } from "@mui/material";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
 				sx={{ backgroundColor: "#150026", height: { xs: "10vh", md: "20vh" } }}
 			/>
 			<Skills />
+			<ComingSoon />
 		</>
 	);
 }
