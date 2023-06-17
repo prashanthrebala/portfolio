@@ -7,4 +7,7 @@ import svgrPlugin from "vite-plugin-svgr";
 export default defineConfig({
 	base: "/portfolio/",
 	plugins: [react(), viteTsconfigPaths(), svgrPlugin()],
+	server: {
+		host: true,
+	},
 });
