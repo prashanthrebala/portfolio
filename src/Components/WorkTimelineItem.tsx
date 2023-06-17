@@ -13,7 +13,7 @@ export const WorkTimelineItem = ({ exp, parentRef }: any) => {
 	const theme = useTheme();
 	const mediumScreen = useMediaQuery(theme.breakpoints.up("md"));
 	const { ref, inView } = useInView({
-		threshold: mediumScreen ? 0.5 : 0.2,
+		threshold: mediumScreen ? 0.5 : 0.1,
 		triggerOnce: true,
 	});
 
@@ -35,8 +35,8 @@ export const WorkTimelineItem = ({ exp, parentRef }: any) => {
 							backgroundImage: `url(${exp["image"]})`,
 							backgroundSize: "contain",
 							backgroundPosition: "cover",
-							height: "1.6em",
-							width: "1.6em",
+							height: { xs: "1em", md: "1.6em" },
+							width: { xs: "1em", md: "1.6em" },
 						}}
 					/>
 				</TimelineDot>
@@ -64,24 +64,24 @@ export const WorkTimelineItem = ({ exp, parentRef }: any) => {
 						}
 						spacing={1}
 					>
-						<Typography variant="body2" textAlign={"center"}>
+						<Typography
+							fontSize={{ xs: "0.75em", sm: "0.875rem" }}
+							textAlign={"center"}
+						>
 							{exp["title"]}
 						</Typography>
-						{mediumScreen ? (
-							<Typography variant="body2" textAlign={"center"}>
-								{exp["duration"]}
-							</Typography>
-						) : (
-							<Typography variant="body2" textAlign={"center"}>
-								{exp["dates"]}
-							</Typography>
-						)}
+						<Typography
+							fontSize={{ xs: "0.75em", sm: "0.875rem" }}
+							textAlign={"center"}
+						>
+							{mediumScreen ? exp["duration"] : exp["dates"]}
+						</Typography>
 					</Stack>
 					<Box
 						sx={{
 							overflow: "hidden",
 							width: { xs: "100%", md: "80%" },
-							paddingY: "1rem",
+							paddingY: { xs: "0.75rem", md: "1rem" },
 						}}
 					>
 						{exp["description"].map((item: string, idx: number) => {
@@ -92,16 +92,17 @@ export const WorkTimelineItem = ({ exp, parentRef }: any) => {
 										variant="body2"
 										sx={{
 											lineHeight: "1.5rem",
-											marginLeft: "0.8rem",
+											marginLeft: { md: "0.8rem" },
 											marginY: "0.5rem",
 										}}
+										textAlign={"justify"}
 									>
 										{item}
 									</Typography>
 								</>
 							);
 						})}
-						<Box padding={2}>
+						<Box paddingTop={2}>
 							{exp["skills"].map((skill: string, idx: number) => {
 								return (
 									<Chip
