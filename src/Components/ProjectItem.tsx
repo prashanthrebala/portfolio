@@ -1,9 +1,10 @@
+import { ProjectItemProps } from "../interfaces/interfaces";
 import { Paper, Link } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 // import IconButton from "@mui/material/IconButton";
 // import { IoMdMore } from "react-icons/io";
 
-export const ProjectItem = (props: any) => {
+export const ProjectItem = (props: ProjectItemProps) => {
 	const {
 		backgroundColor,
 		backgroundImage,

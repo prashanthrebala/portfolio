@@ -1,7 +1,8 @@
+import { SkillMasonryItemProps } from "../interfaces/interfaces";
 import { Box, Paper, Grow } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 
-export const SkillMasonryItem = ({ icon, height }: any) => {
+export const SkillMasonryItem = ({ icon, height }: SkillMasonryItemProps) => {
 	const { ref, inView } = useInView({ threshold: 0.3 });
 	return (
 		<Paper

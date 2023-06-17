@@ -70,7 +70,12 @@ export const ComingSoon = () => {
 	);
 };
 
-const ComingSoonGridItem = ({ children, inView }: any) => {
+interface ComingSoonGridItemProps {
+	children: React.ReactNode;
+	inView: boolean;
+}
+
+const ComingSoonGridItem = ({ children, inView }: ComingSoonGridItemProps) => {
 	return (
 		<Zoom in={inView} timeout={1000}>
 			<Grid

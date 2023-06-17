@@ -7,10 +7,10 @@ import { skills } from "../Content/skills";
 const tripleArray = (arr: any) => [...arr, ...arr, ...arr];
 
 export const Skills = () => {
-	const masonryRef = useRef(null);
+	const masonryRef = useRef<HTMLDivElement | null>(null);
 	const [scrollDistance, setScrollDistance] = useState(2);
 	useEffect(() => {
-		const masonryScroller: any = masonryRef.current;
+		const masonryScroller: HTMLDivElement | null = masonryRef.current;
 		const animateScroll = () => {
 			if (masonryScroller) {
 				if (scrollDistance < 0) {
@@ -76,10 +76,8 @@ export const Skills = () => {
 					<Masonry columns={3} spacing={5}>
 						{tripleArray(skills.skillSet).map((skill, index) => (
 							<SkillMasonryItem
-								name={skill["name"]}
 								icon={skill["icon"]}
 								height={skill["height"]}
-								index={index}
 								key={index}
 							/>
 						))}

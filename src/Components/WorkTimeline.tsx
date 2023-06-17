@@ -1,13 +1,14 @@
 import React, { useRef } from "react";
 import { Grid, Typography } from "@mui/material";
 import Timeline from "@mui/lab/Timeline";
+import { WorkItemProps } from "../interfaces/interfaces";
 import { timelineOppositeContentClasses } from "@mui/lab/TimelineOppositeContent";
 import { timelineItemClasses } from "@mui/lab/TimelineItem";
 import { work_experience } from "../Content/work_experience";
 import { WorkTimelineItem } from "./WorkTimelineItem";
 
 export const WorkTimeline = () => {
-	const experiences = work_experience.professional;
+	const experiences: WorkItemProps[] = work_experience.professional;
 	const workExpRef = useRef(null);
 	const [opacity, setOpacity] = React.useState(0);
 	React.useEffect(() => {
@@ -94,8 +95,8 @@ export const WorkTimeline = () => {
 						},
 					}}
 				>
-					{experiences.map((exp, idx) => {
-						return <WorkTimelineItem exp={exp} key={idx} />;
+					{experiences.map((experience, idx) => {
+						return <WorkTimelineItem experience={experience} key={idx} />;
 					})}
 				</Timeline>
 			</Grid>

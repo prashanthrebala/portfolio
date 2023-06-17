@@ -1,4 +1,5 @@
 import { Box, Typography, Stack, Divider, Slide, Chip } from "@mui/material";
+import { WorkItemProps } from "../interfaces/interfaces";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
@@ -9,7 +10,11 @@ import { useInView } from "react-intersection-observer";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
-export const WorkTimelineItem = ({ exp, parentRef }: any) => {
+export const WorkTimelineItem = (props: { experience: WorkItemProps }) => {
+	const { experience } = props;
+	const { company, title, dates, from_date, to_date, duration } = experience;
+	const { image, skills, description } = experience;
+
 	const theme = useTheme();
 	const mediumScreen = useMediaQuery(theme.breakpoints.up("md"));
 	const { ref, inView } = useInView({
@@ -23,16 +28,16 @@ export const WorkTimelineItem = ({ exp, parentRef }: any) => {
 				<TimelineOppositeContent
 					sx={{ opacity: inView ? 1 : 0, transition: "opacity 0.5s" }}
 				>
-					{exp["from_date"]} to
+					{from_date} to
 					<br />
-					{exp["to_date"]}
+					{to_date}
 				</TimelineOppositeContent>
 			)}
 			<TimelineSeparator>
 				<TimelineDot sx={{ backgroundColor: "#dedede" }}>
 					<Box
 						sx={{
-							backgroundImage: `url(${exp["image"]})`,
+							backgroundImage: `url(${image})`,
 							backgroundSize: "contain",
 							backgroundPosition: "cover",
 							height: { xs: "1em", md: "1.6em" },
@@ -42,15 +47,10 @@ export const WorkTimelineItem = ({ exp, parentRef }: any) => {
 				</TimelineDot>
 				<TimelineConnector />
 			</TimelineSeparator>
-			<Slide
-				direction="left"
-				in={inView}
-				container={parentRef?.current}
-				{...(inView ? { timeout: 500 } : {})}
-			>
+			<Slide direction="left" in={inView} {...(inView ? { timeout: 500 } : {})}>
 				<TimelineContent>
 					<Typography variant="h5" marginBottom={1}>
-						{exp["company"]}
+						{company}
 					</Typography>
 					<Stack
 						direction="row"
@@ -68,13 +68,13 @@ export const WorkTimelineItem = ({ exp, parentRef }: any) => {
 							fontSize={{ xs: "0.75em", sm: "0.875rem" }}
 							textAlign={"center"}
 						>
-							{exp["title"]}
+							{title}
 						</Typography>
 						<Typography
 							fontSize={{ xs: "0.75em", sm: "0.875rem" }}
 							textAlign={"center"}
 						>
-							{mediumScreen ? exp["duration"] : exp["dates"]}
+							{mediumScreen ? duration : dates}
 						</Typography>
 					</Stack>
 					<Box
@@ -84,7 +84,7 @@ export const WorkTimelineItem = ({ exp, parentRef }: any) => {
 							paddingY: { xs: "0.75rem", md: "1rem" },
 						}}
 					>
-						{exp["description"].map((item: string, idx: number) => {
+						{description.map((item: string, idx: number) => {
 							return (
 								<>
 									<Typography
@@ -103,7 +103,7 @@ export const WorkTimelineItem = ({ exp, parentRef }: any) => {
 							);
 						})}
 						<Box paddingTop={2}>
-							{exp["skills"].map((skill: string, idx: number) => {
+							{skills.map((skill: string, idx: number) => {
 								return (
 									<Chip
 										key={idx}
