@@ -10,13 +10,6 @@ import { WorkTimelineItem } from "./WorkTimelineItem";
 export const WorkTimeline = () => {
 	const experiences: WorkItemProps[] = work_experience.professional;
 	const workExpRef = useRef(null);
-	const [opacity, setOpacity] = React.useState(0);
-	React.useEffect(() => {
-		const timer = setInterval(() => {
-			setOpacity((prevValue) => 1 - prevValue);
-		}, 400);
-		return () => clearInterval(timer);
-	}, []);
 	return (
 		<Grid
 			container
@@ -57,21 +50,7 @@ export const WorkTimeline = () => {
 						bottom: { md: 0 },
 					}}
 				>
-					<Typography
-						sx={{
-							fontSize: { xs: "2.5em", lg: "3.5em" },
-							fontWeight: "bold",
-							paddingLeft: { xs: "0.8em", md: "1.6em" },
-							fontFamily: "Courier Prime",
-						}}
-					>
-						work experience
-						<span
-							style={{ display: "unset", opacity, transition: "opacity 0.3s" }}
-						>
-							▮
-						</span>
-					</Typography>
+					<WorkExperienceFlicker />
 				</Grid>
 			</Grid>
 			<Grid
@@ -101,5 +80,30 @@ export const WorkTimeline = () => {
 				</Timeline>
 			</Grid>
 		</Grid>
+	);
+};
+
+const WorkExperienceFlicker = () => {
+	const [opacity, setOpacity] = React.useState(0);
+	React.useEffect(() => {
+		const timer = setInterval(() => {
+			setOpacity((prevValue) => 1 - prevValue);
+		}, 400);
+		return () => clearInterval(timer);
+	}, []);
+	return (
+		<Typography
+			sx={{
+				fontSize: { xs: "2.5em", lg: "3.5em" },
+				fontWeight: "bold",
+				paddingLeft: { xs: "0.8em", md: "1.6em" },
+				fontFamily: "Courier Prime",
+			}}
+		>
+			work experience
+			<span style={{ display: "unset", opacity, transition: "opacity 0.3s" }}>
+				▮
+			</span>
+		</Typography>
 	);
 };
