@@ -1,18 +1,18 @@
-import react from "../Assets/React.svg";
-import mongo from "../Assets/mongodb.svg";
-import express from "../Assets/express.svg";
-import node from "../Assets/NodeJS.svg";
-import cypress from "../Assets/cypress.svg";
-import graphql from "../Assets/graphql.svg";
-import git from "../Assets/git.svg";
-import python from "../Assets/python.svg";
-import java from "../Assets/java.svg";
-import angular from "../Assets/angular.svg";
-import mysql from "../Assets/mysql.svg";
-import html from "../Assets/html-5.svg";
-import css from "../Assets/css-3.svg";
-import javascript from "../Assets/javascript.svg";
-import typescript from "../Assets/typescript.svg";
+import react from "../assets/React.svg";
+import mongo from "../assets/mongodb.svg";
+import express from "../assets/express.svg";
+import node from "../assets/NodeJS.svg";
+import cypress from "../assets/cypress.svg";
+import graphql from "../assets/graphql.svg";
+import git from "../assets/git.svg";
+import python from "../assets/python.svg";
+import java from "../assets/java.svg";
+import angular from "../assets/angular.svg";
+import mysql from "../assets/mysql.svg";
+import html from "../assets/html-5.svg";
+import css from "../assets/css-3.svg";
+import javascript from "../assets/javascript.svg";
+import typescript from "../assets/typescript.svg";
 
 export const skills = {
 	skillSet: [

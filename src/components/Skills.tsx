@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Grid, Typography, Paper } from "@mui/material";
 import { Masonry } from "@mui/lab";
 import { SkillMasonryItem } from "./SkillMasonryItem";
-import { skills } from "../Content/skills";
+import { skills } from "../data/skills";
 
 const tripleArray = (arr: any) => [...arr, ...arr, ...arr];
 

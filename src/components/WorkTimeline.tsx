@@ -4,7 +4,7 @@ import Timeline from "@mui/lab/Timeline";
 import { WorkItemProps } from "../interfaces/interfaces";
 import { timelineOppositeContentClasses } from "@mui/lab/TimelineOppositeContent";
 import { timelineItemClasses } from "@mui/lab/TimelineItem";
-import { work_experience } from "../Content/work_experience";
+import { work_experience } from "../data/work_experience";
 import { WorkTimelineItem } from "./WorkTimelineItem";
 
 export const WorkTimeline = () => {

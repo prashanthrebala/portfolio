@@ -1,6 +1,6 @@
 import { ProjectItem } from "../ProjectItem";
 import { Box, Typography, Grid } from "@mui/material";
-import background from "../../Assets/backgrounds/handjutsu.png";
+import background from "../../assets/backgrounds/handjutsu.png";
 // import { AiOutlineGithub, AiFillYoutube } from "react-icons/ai";
 
 export const HandJutsu = () => {

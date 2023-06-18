@@ -2,7 +2,7 @@ import { ProjectItem } from "../ProjectItem";
 import { Box, Typography, Grid } from "@mui/material";
 // import { AiOutlineGithub, AiFillYoutube } from "react-icons/ai";
 
-import background from "../../Assets/backgrounds/summarizr.png";
+import background from "../../assets/backgrounds/summarizr.png";
 
 export const ArticleSummarizr = () => {
 	return (

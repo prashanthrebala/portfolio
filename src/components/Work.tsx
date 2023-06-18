@@ -1,7 +1,7 @@
 import { Box, Grid } from "@mui/material";
 import { WorkCard } from "./WorkCard";
 import Carousel from "react-material-ui-carousel";
-import { work_experience } from "../Content/work_experience";
+import { work_experience } from "../data/work_experience";
 import CircleIcon from "@mui/icons-material/Circle";
 import React from "react";
 

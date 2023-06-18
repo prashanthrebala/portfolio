@@ -1,5 +1,5 @@
-import darwinbox from "../Assets/darwinbox.png";
-import microsoft from "../Assets/microsoft.png";
+import darwinbox from "../assets/darwinbox.png";
+import microsoft from "../assets/microsoft.png";
 
 export const work_experience = {
 	professional: [

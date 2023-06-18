@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
-import { Intro } from "./Components/Intro";
-import { Projects } from "./Components/Projects";
-import { WorkTimeline } from "./Components/WorkTimeline";
-import { Skills } from "./Components/Skills";
-import { ComingSoon } from "./Components/ComingSoon";
+import { Intro } from "./components/Intro";
+import { Projects } from "./components/Projects";
+import { WorkTimeline } from "./components/WorkTimeline";
+import { Skills } from "./components/Skills";
+import { ComingSoon } from "./components/ComingSoon";
 import { Box } from "@mui/material";
 
 function App() {

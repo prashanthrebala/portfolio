@@ -1,6 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import { SkillItem } from "./SkillItem";
-import { skills } from "../Content/skills";
+import { skills } from "../data/skills";
 
 export const SkillsTiles = () => {
 	return (
