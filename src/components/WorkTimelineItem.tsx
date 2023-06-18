@@ -86,20 +86,18 @@ export const WorkTimelineItem = (props: { experience: WorkItemProps }) => {
 					>
 						{description.map((item: string, idx: number) => {
 							return (
-								<>
-									<Typography
-										key={idx}
-										variant="body2"
-										sx={{
-											lineHeight: "1.5rem",
-											marginLeft: { md: "0.8rem" },
-											marginY: "0.5rem",
-										}}
-										textAlign={"justify"}
-									>
-										{item}
-									</Typography>
-								</>
+								<Typography
+									key={idx}
+									variant="body2"
+									sx={{
+										lineHeight: "1.5rem",
+										marginLeft: { md: "0.8rem" },
+										marginY: "0.5rem",
+									}}
+									textAlign={"justify"}
+								>
+									{item}
+								</Typography>
 							);
 						})}
 						<Box paddingTop={2}>

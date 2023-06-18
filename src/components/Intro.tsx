@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, Typography, Stack, Grid, Divider } from "@mui/material";
+import { Avatar, Typography, Stack, Grid, Divider, Box } from "@mui/material";
 import { LetterComponent } from "./LetterComponent";
 import prashanth_rebala from "../assets/prashanth_rebala.jpg";
 import { ParticleBackground } from "./ParticleBackground";
@@ -65,6 +65,7 @@ export const Intro = () => {
 				>
 					{"Prashanth Rebala".split("").map((letter, idx) => (
 						<LetterComponent
+							key={idx}
 							letter={letter}
 							animationDuration={700 + 40 * idx}
 						/>

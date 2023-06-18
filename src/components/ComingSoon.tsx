@@ -79,6 +79,7 @@ const ComingSoonGridItem = ({ children, inView }: ComingSoonGridItemProps) => {
 	return (
 		<Zoom in={inView} timeout={1000}>
 			<Grid
+				container
 				item
 				xs={5}
 				md={2.5}

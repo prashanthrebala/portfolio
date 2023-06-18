@@ -16,7 +16,7 @@ export const LetterComponent = ({ letter, animationDuration }: any) => {
 	}, [animationDuration]);
 
 	return (
-		<div
+		<span
 			style={{
 				display: "unset",
 				opacity,
@@ -32,6 +32,6 @@ export const LetterComponent = ({ letter, animationDuration }: any) => {
 			// }}
 		>
 			{letter}
-		</div>
+		</span>
 	);
 };
