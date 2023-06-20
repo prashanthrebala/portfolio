@@ -8,6 +8,7 @@ import { ComingSoon } from "./components/ComingSoon";
 import { Box } from "@mui/material";
 
 function App() {
+	// create intersection observers here to animate section to section transitions
 	return (
 		<>
 			<Intro />

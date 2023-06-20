@@ -64,7 +64,7 @@ export const Projects = () => {
 				>
 					<Typography
 						variant="h2"
-						fontFamily={"Permanent Marker"}
+						fontFamily={"Tillana"}
 						sx={{
 							transform: { md: "rotate(-90deg)" },
 						}}
