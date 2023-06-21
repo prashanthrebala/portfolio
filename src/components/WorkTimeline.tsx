@@ -7,20 +7,21 @@ import { timelineItemClasses } from "@mui/lab/TimelineItem";
 import { work_experience } from "../data/work_experience";
 import { WorkTimelineItem, EmptyWorkTimelineItem } from "./WorkTimelineItem";
 
-export const WorkTimeline = () => {
+export const WorkTimeline = ({ inView }: any) => {
 	const experiences: WorkItemProps[] = work_experience.professional;
 	const workExpRef = useRef(null);
 	return (
 		<Grid
 			container
 			sx={{
-				backgroundColor: "#150026",
+				backgroundColor: inView ? "#260037" : "#150026",
 				color: "#eee",
 				minHeight: "100vh",
 				display: "flex",
 				flexDirection: { xs: "column", md: "row" },
 				justifyContent: "center",
 				alignItems: "flex-start",
+				transition: "background-color 0.8s",
 			}}
 		>
 			<Grid
