@@ -5,7 +5,7 @@ import { WorkItemProps } from "../interfaces/interfaces";
 import { timelineOppositeContentClasses } from "@mui/lab/TimelineOppositeContent";
 import { timelineItemClasses } from "@mui/lab/TimelineItem";
 import { work_experience } from "../data/work_experience";
-import { WorkTimelineItem } from "./WorkTimelineItem";
+import { WorkTimelineItem, EmptyWorkTimelineItem } from "./WorkTimelineItem";
 
 export const WorkTimeline = () => {
 	const experiences: WorkItemProps[] = work_experience.professional;
@@ -77,6 +77,7 @@ export const WorkTimeline = () => {
 					{experiences.map((experience, idx) => {
 						return <WorkTimelineItem experience={experience} key={idx} />;
 					})}
+					<EmptyWorkTimelineItem />
 				</Timeline>
 			</Grid>
 		</Grid>

@@ -9,6 +9,7 @@ import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import { useInView } from "react-intersection-observer";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import codeBracket from "../assets/code_bracket.png";
 
 export const WorkTimelineItem = (props: { experience: WorkItemProps }) => {
 	const { experience } = props;
@@ -39,7 +40,7 @@ export const WorkTimelineItem = (props: { experience: WorkItemProps }) => {
 						sx={{
 							backgroundImage: `url(${image})`,
 							backgroundSize: "contain",
-							backgroundPosition: "cover",
+							backgroundPosition: "center",
 							height: { xs: "1em", md: "1.6em" },
 							width: { xs: "1em", md: "1.6em" },
 						}}
@@ -119,6 +120,30 @@ export const WorkTimelineItem = (props: { experience: WorkItemProps }) => {
 					</Box>
 				</TimelineContent>
 			</Slide>
+		</TimelineItem>
+	);
+};
+
+export const EmptyWorkTimelineItem = () => {
+	const theme = useTheme();
+	const mediumScreen = useMediaQuery(theme.breakpoints.up("md"));
+	return (
+		<TimelineItem>
+			{mediumScreen && <TimelineOppositeContent />}
+			<TimelineSeparator>
+				<TimelineDot sx={{ backgroundColor: "#dedede" }}>
+					<Box
+						sx={{
+							backgroundImage: `url(${codeBracket})`,
+							backgroundSize: "contain",
+							backgroundPosition: "center",
+							height: { xs: "1em", md: "1.6em" },
+							width: { xs: "1em", md: "1.6em" },
+						}}
+					></Box>
+				</TimelineDot>
+			</TimelineSeparator>
+			<TimelineContent />
 		</TimelineItem>
 	);
 };
