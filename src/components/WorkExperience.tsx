@@ -23,7 +23,8 @@ const SectionFader = ({ sectionRef, sectionInView }: any) => {
 			ref={sectionRef}
 			sx={{
 				backgroundImage: `linear-gradient(#150026, #260037)`,
-				height: { xs: "20vh", md: "40vh" },
+				height: { xs: "20vh", md: "30vh" },
+				overflowX: "hidden",
 			}}
 		>
 			<Box
@@ -36,7 +37,7 @@ const SectionFader = ({ sectionRef, sectionInView }: any) => {
 					display: "flex",
 					justifyContent: "center",
 					alignItems: "center",
-					fontSize: "6em",
+					fontSize: { xs: "2em", md: "6em" },
 					fontWeight: "200",
 					transition: "opacity 0.8s",
 				}}
