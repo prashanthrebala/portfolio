@@ -7,6 +7,7 @@ import { GitHub } from "./Projects/GitHub";
 import { useInView } from "react-intersection-observer";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import workStackBG from "../assets/backgrounds/projects.png";
 
 export const Projects = () => {
 	const projectItemPadding = 2;
@@ -47,9 +48,10 @@ export const Projects = () => {
 				container
 				direction={{ md: "row", xs: "column" }}
 				sx={{
-					backgroundColor: "#150026",
+					backgroundImage: `url(${workStackBG})`,
 					position: "relative",
-					backgroundSize: "cover",
+					backgroundSize: "auto 100%",
+					// backgroundRepeat: "no-repeat",
 				}}
 				padding={projectItemPadding}
 			>
@@ -63,10 +65,12 @@ export const Projects = () => {
 					sx={{ backgroundColor: "rgba(#000, 0)", color: "white" }}
 				>
 					<Typography
-						variant="h2"
 						fontFamily={"Tillana"}
 						sx={{
 							transform: { md: "rotate(-90deg)" },
+							textShadow: "0.1em 0.1em 0.2em black",
+							fontSize: { xs: "3em", md: "3.5em", lg: "5em" },
+							marginBottom: { xs: "1em", md: 0 },
 						}}
 					>
 						Projects
