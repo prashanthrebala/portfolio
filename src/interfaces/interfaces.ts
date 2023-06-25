@@ -1,10 +1,12 @@
+// TODO all props are marked as optional for now
+// change it once all Project Items are implemented
 interface ProjectItemProps {
-	backgroundColor: string;
-	backgroundImage: string;
-	backgroundPosition: string;
-	backgroundSize: string;
-	children: React.ReactNode;
-	targetLink: string;
+	backgroundColor?: string;
+	backgroundImage?: string;
+	backgroundPosition?: string;
+	backgroundSize?: string;
+	children?: React.ReactNode;
+	targetLink?: string;
 }
 
 interface SkillMasonryItemProps {
