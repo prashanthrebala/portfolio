@@ -18,7 +18,7 @@ export const ComingSoon = () => {
 			container
 			sx={{
 				minHeight: "100vh",
-				backgroundColor: "#150026",
+				backgroundColor: "#146C94",
 				display: "flex",
 				flexDirection: "column",
 				justifyContent: "center",
@@ -29,7 +29,7 @@ export const ComingSoon = () => {
 		>
 			<Typography
 				sx={{
-					backgroundColor: "#150026",
+					backgroundColor: "#146C94",
 					fontSize: { xs: "3em", md: "5em" },
 					fontWeight: 300,
 				}}

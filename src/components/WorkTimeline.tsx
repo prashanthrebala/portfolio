@@ -14,8 +14,9 @@ export const WorkTimeline = ({ inView }: any) => {
 		<Grid
 			container
 			sx={{
-				backgroundColor: inView ? "#260037" : "#150026",
-				color: "#eee",
+				// backgroundColor: inView ? "#260037" : "#150026",
+				backgroundColor: "#F6F1F1",
+				color: "#000",
 				minHeight: "100vh",
 				display: "flex",
 				flexDirection: { xs: "column", md: "row" },

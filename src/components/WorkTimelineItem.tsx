@@ -111,7 +111,7 @@ export const WorkTimelineItem = (props: { experience: WorkItemProps }) => {
 											color: "#fff",
 											fontSize: "0.9rem",
 											margin: "0.25rem",
-											backgroundColor: "#3c005a",
+											backgroundColor: "#146C94",
 										}}
 									/>
 								);

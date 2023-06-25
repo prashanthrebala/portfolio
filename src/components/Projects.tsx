@@ -43,7 +43,8 @@ export const Projects = ({ inView }: any) => {
 				container
 				direction={{ md: "row", xs: "column" }}
 				sx={{
-					backgroundImage: `url(${workStackBG})`,
+					// backgroundImage: `url(${workStackBG})`,
+					backgroundColor: "#F6F1F1",
 					position: "relative",
 					backgroundSize: "auto 100%",
 					// backgroundRepeat: "no-repeat",
@@ -57,13 +58,15 @@ export const Projects = ({ inView }: any) => {
 					justifyContent={"center"}
 					alignItems={"center"}
 					overflow={"hidden"}
-					sx={{ backgroundColor: "rgba(#000, 0)", color: "white" }}
+					sx={{ backgroundColor: "rgba(#000, 0)" }}
 				>
 					<Typography
 						fontFamily={"Tillana"}
+						// fontFamily={"Roboto"}
+						// fontWeight={"300"}
 						sx={{
 							transform: { md: "rotate(-90deg)" },
-							textShadow: "0.1em 0.1em 0.2em black",
+							// textShadow: "0.05em 0.05em 0.5em black",
 							fontSize: { xs: "3em", md: "3.5em", lg: "5em" },
 							marginBottom: { xs: "1em", md: 0 },
 						}}

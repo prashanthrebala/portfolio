@@ -24,6 +24,7 @@ export const ProjectItem = (props: ProjectItemProps) => {
 			color="inherit"
 		>
 			<Paper
+				elevation={12}
 				sx={{
 					height: "100%",
 					...(backgroundImage && {

@@ -22,12 +22,13 @@ const SectionFader = ({ sectionRef, sectionInView }: any) => {
 		<Box
 			ref={sectionRef}
 			sx={{
-				backgroundImage: `linear-gradient(#260037, #371148)`,
-				height: { xs: "20vh", md: "30vh" },
+				// backgroundImage: `linear-gradient(#260037, #371148)`,
+				backgroundColor: "#F6F1F1",
+				height: { xs: "0vh", md: "20vh" },
 				overflowX: "hidden",
 			}}
 		>
-			<Box
+			{/* <Box
 				sx={{
 					backgroundColor: "#260037",
 					opacity: sectionInView ? 0 : 1,
@@ -43,7 +44,7 @@ const SectionFader = ({ sectionRef, sectionInView }: any) => {
 				}}
 			>
 				PROJECTS
-			</Box>
+			</Box> */}
 		</Box>
 	);
 };

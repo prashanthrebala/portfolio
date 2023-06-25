@@ -6,7 +6,7 @@ export const SkillMasonryItem = ({ icon, height }: SkillMasonryItemProps) => {
 	const { ref, inView } = useInView({ threshold: 0.3 });
 	return (
 		<Paper
-			sx={{ backgroundColor: "#2c2c54", padding: "0.2rem" }}
+			sx={{ backgroundColor: "#AFD3E2", padding: "0.2rem" }}
 			elevation={1}
 			ref={ref}
 		>

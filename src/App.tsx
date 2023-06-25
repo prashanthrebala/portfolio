@@ -10,14 +10,14 @@ import { ProjectSection } from "./components/ProjectSection";
 
 function App() {
 	// create intersection observers here to animate section to section transitions
-
+	// https://colorhunt.co/palette/f6f1f1afd3e219a7ce146c94
 	return (
 		<>
 			<Intro />
 			<WorkExperience />
 			<ProjectSection />
 			<Box
-				sx={{ backgroundColor: "#150026", height: { xs: "10vh", md: "20vh" } }}
+				sx={{ backgroundColor: "#F6F1F1", height: { xs: "10vh", md: "20vh" } }}
 			/>
 			<Skills />
 			<ComingSoon />

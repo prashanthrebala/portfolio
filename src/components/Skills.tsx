@@ -37,7 +37,7 @@ export const Skills = () => {
 	return (
 		<Grid
 			container
-			sx={{ width: "100%", minHeight: "100vh", backgroundColor: "#150026" }}
+			sx={{ width: "100%", minHeight: "100vh", backgroundColor: "#F6F1F1" }}
 			direction={"column"}
 			gap={1}
 		>
@@ -45,10 +45,10 @@ export const Skills = () => {
 				textAlign={"center"}
 				fontFamily={"Secular One"}
 				fontSize={{ xs: "2.5em", md: "4em" }}
-				sx={{ color: "#d1ccc0" }}
+				sx={{ color: "#000" }}
 				paddingY={3.5}
 			>
-				Techn<span style={{ color: "#993399" }}>i</span>cal Skills
+				Techn<span style={{ color: "#146C94" }}>i</span>cal Skills
 			</Typography>
 			<Grid
 				container
@@ -103,14 +103,14 @@ export const Skills = () => {
 								key={index}
 								sx={{
 									borderRadius: "1rem",
-									backgroundColor: "#2c2c54",
-									color: "#d1ccc0",
+									backgroundColor: "#AFD3E2",
+									color: "#000",
 								}}
 							>
 								<Typography
 									variant="body1"
 									textAlign={"center"}
-									sx={{ backgroundColor: "#40407a", borderRadius: "1rem" }}
+									sx={{ backgroundColor: "#F6F1F1", borderRadius: "1rem" }}
 									fontSize={{ xs: "0.9em", md: "1em" }}
 									p={1}
 									m={1}
