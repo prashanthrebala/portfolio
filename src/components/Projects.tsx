@@ -4,16 +4,12 @@ import { ProjectItem } from "./ProjectItem";
 import { HandJutsu } from "./Projects/HandJutsu";
 import { ArticleSummarizr } from "./Projects/ArticleSummarizr";
 import { GitHub } from "./Projects/GitHub";
-import { useInView } from "react-intersection-observer";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import workStackBG from "../assets/backgrounds/projects.png";
 
-export const Projects = () => {
+export const Projects = ({ inView }: any) => {
 	const projectItemPadding = 2;
-	const { ref, inView } = useInView({
-		// threshold: 0.2,
-	});
 	const theme = useTheme();
 	const mediumScreen = useMediaQuery(theme.breakpoints.up("md"));
 	const [snackbarOpen, setSnackbarOpen] = useState(true);
@@ -26,19 +22,18 @@ export const Projects = () => {
 		<>
 			<Snackbar
 				open={snackbarOpen && inView}
-				anchorOrigin={{ vertical: "top", horizontal: "center" }}
+				anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
 				autoHideDuration={6000}
 				onClose={handleCloseSnackbar}
 			>
 				<Alert
 					variant="filled"
-					severity="info"
-					sx={{ boxShadow: 12, width: { xs: "80%", md: "70%" } }}
+					severity="warning"
+					sx={{ boxShadow: 12, width: { xs: "80%", md: "60%" } }}
 				>
 					<Typography variant="body1">
-						Currently under construction! I'm working on implementing suitable
-						designs for this section of my website. Meanwhile, feel free to
-						check out my GitHub. Thank you for your patience!
+						Under construction! I'm working on suitable designs for this
+						section. Feel free to check out my GitHub for other projects!
 					</Typography>
 				</Alert>
 			</Snackbar>
@@ -110,13 +105,7 @@ export const Projects = () => {
 								md={6}
 								xs={12}
 							>
-								<Grid
-									ref={ref}
-									item
-									md={6}
-									xs={12}
-									padding={projectItemPadding}
-								>
+								<Grid item md={6} xs={12} padding={projectItemPadding}>
 									<ArticleSummarizr />
 								</Grid>
 								<Grid item md={6} xs={12} padding={projectItemPadding}>

@@ -6,6 +6,7 @@ import { WorkExperience } from "./components/WorkExperience";
 import { Skills } from "./components/Skills";
 import { ComingSoon } from "./components/ComingSoon";
 import { Box } from "@mui/material";
+import { ProjectSection } from "./components/ProjectSection";
 
 function App() {
 	// create intersection observers here to animate section to section transitions
@@ -14,10 +15,7 @@ function App() {
 		<>
 			<Intro />
 			<WorkExperience />
-			<Box
-				sx={{ backgroundColor: "#150026", height: { xs: "10vh", md: "20vh" } }}
-			/>
-			<Projects />
+			<ProjectSection />
 			<Box
 				sx={{ backgroundColor: "#150026", height: { xs: "10vh", md: "20vh" } }}
 			/>
