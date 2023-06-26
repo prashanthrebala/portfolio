@@ -74,13 +74,15 @@ export const Skills = () => {
 					justifyContent={"center"}
 				>
 					<Masonry columns={3} spacing={5}>
-						{tripleArray(skills.skillSet).map((skill, index) => (
-							<SkillMasonryItem
-								icon={skill["icon"]}
-								height={skill["height"]}
-								key={index}
-							/>
-						))}
+						{tripleArray(skills.skillSet.sort(() => Math.random() - 0.5)).map(
+							(skill, index) => (
+								<SkillMasonryItem
+									icon={skill["icon"]}
+									height={skill["height"]}
+									key={index}
+								/>
+							)
+						)}
 					</Masonry>
 				</Grid>
 				<Grid
