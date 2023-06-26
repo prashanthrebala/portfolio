@@ -48,7 +48,7 @@ export const Intro = () => {
 				sx={{
 					width: "16rem",
 					height: "16rem",
-					border: "0.2em solid #146C9480",
+					border: "0.5em solid #146C94",
 				}}
 			/>
 			{/* Change the grid width to md={3} when adding 'about' section */}

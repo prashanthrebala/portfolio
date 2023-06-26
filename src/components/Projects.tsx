@@ -32,7 +32,7 @@ export const Projects = ({ inView }: any) => {
 					sx={{ boxShadow: 12, width: { xs: "80%", md: "60%" } }}
 				>
 					<Typography variant="body1">
-						Under construction! I'm working on suitable designs for this
+						Under construction! I'm working on suitable designs for the projects
 						section. Feel free to check out my GitHub for other projects!
 					</Typography>
 				</Alert>
@@ -44,7 +44,7 @@ export const Projects = ({ inView }: any) => {
 				direction={{ md: "row", xs: "column" }}
 				sx={{
 					// backgroundImage: `url(${workStackBG})`,
-					backgroundColor: "#F6F1F1",
+					backgroundColor: "#E6E1E1",
 					position: "relative",
 					backgroundSize: "auto 100%",
 					// backgroundRepeat: "no-repeat",
