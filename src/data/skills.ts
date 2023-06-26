@@ -13,6 +13,11 @@ import html from "../assets/html-5.svg";
 import css from "../assets/css-3.svg";
 import javascript from "../assets/javascript.svg";
 import typescript from "../assets/typescript.svg";
+import tailwind from "../assets/tailwind.svg";
+import nextjs from "../assets/nextjs.svg";
+import docker from "../assets/docker.svg";
+import kubernetes from "../assets/kubernetes.svg";
+import prisma from "../assets/prisma.svg";
 
 export const skills = {
 	skillSet: [
@@ -91,18 +96,44 @@ export const skills = {
 			icon: mysql,
 			height: "3rem",
 		},
+		{
+			name: "NextJS",
+			icon: nextjs,
+			height: "4rem",
+		},
+		{
+			name: "Docker",
+			icon: docker,
+			height: "4rem",
+		},
+		{
+			name: "Kubernetes",
+			icon: kubernetes,
+			height: "4rem",
+		},
+		{
+			name: "Tailwind",
+			icon: tailwind,
+			height: "4rem",
+		},
+		{
+			name: "Prisma",
+			icon: prisma,
+			height: "4rem",
+		},
 	],
 	categories: [
 		{
 			title: "Web Development",
 			items: [
 				"React",
+				"NextJS",
 				"TypeScript",
-				"HTML",
-				"CSS",
-				"JavaScript",
 				"Node.js",
 				"Express",
+				"Angular",
+				"Tailwind",
+				"HTML / CSS / JS",
 			],
 		},
 		{
@@ -110,12 +141,8 @@ export const skills = {
 			items: ["JavaScript", "Python", "Java", "C#"],
 		},
 		{
-			title: "Databases",
-			items: ["MongoDB", "MySQL"],
-		},
-		{
-			title: "Data Query Languages",
-			items: ["Apollo", "GraphQL"],
+			title: "Data Management",
+			items: ["MongoDB", "GraphQL", "MySQL", "PostgreSQL", "Prisma"],
 		},
 		// {
 		// 	title: "CSS Frameworks",
@@ -127,7 +154,7 @@ export const skills = {
 		// },
 		{
 			title: "Tools",
-			items: ["Docker", "Git", "GitHub"],
+			items: ["Docker", "Kubernetes", "Git", "GitHub"],
 		},
 		{
 			title: "Testing",
