@@ -26,13 +26,13 @@ export const ParticleBackground = () => {
 				},
 				background: {
 					color: {
-						value: "#150026",
+						value: "#146C94",
 					},
 				},
 				fpsLimit: 60,
 				particles: {
 					color: {
-						value: "#5D3F6A",
+						value: "#AFD3E2",
 					},
 					collisions: {
 						enable: false,

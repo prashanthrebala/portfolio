@@ -6,7 +6,7 @@ import { ParticleBackground } from "./ParticleBackground";
 
 export const Intro = () => {
 	const [showParticles, setShowParticles] = React.useState(false);
-	const [backgroundColor, setBackgroundColor] = React.useState("#150026");
+	const [backgroundColor, setBackgroundColor] = React.useState("#fff");
 	const [opacity, setOpacity] = React.useState(0);
 
 	React.useEffect(() => {
@@ -30,7 +30,7 @@ export const Intro = () => {
 		<Grid
 			container
 			sx={{
-				color: "#eee",
+				color: "#000",
 				backgroundColor,
 				transition: "background-color 0.7s",
 			}}
@@ -43,7 +43,14 @@ export const Intro = () => {
 			position={"relative"}
 		>
 			{showParticles && <ParticleBackground />}
-			<Avatar src={prashanth_rebala} sx={{ width: "16rem", height: "16rem" }} />
+			<Avatar
+				src={prashanth_rebala}
+				sx={{
+					width: "16rem",
+					height: "16rem",
+					border: "0.5em solid #146C94",
+				}}
+			/>
 			{/* Change the grid width to md={3} when adding 'about' section */}
 			<Grid item margin={1} xs={10} md={5}>
 				<Typography
