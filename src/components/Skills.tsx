@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import { Grid, Typography, Paper } from "@mui/material";
 import { Masonry } from "@mui/lab";
 import { SkillMasonryItem } from "./SkillMasonryItem";
@@ -9,6 +9,10 @@ const tripleArray = (arr: any) => [...arr, ...arr, ...arr];
 export const Skills = () => {
 	const masonryRef = useRef<HTMLDivElement | null>(null);
 	const [scrollDistance, setScrollDistance] = useState(2);
+	const skillSVGArray = useMemo(
+		() => tripleArray(skills.skillSet.sort(() => Math.random() - 0.5)),
+		[skills]
+	);
 	useEffect(() => {
 		const masonryScroller: HTMLDivElement | null = masonryRef.current;
 		const animateScroll = () => {
@@ -74,15 +78,13 @@ export const Skills = () => {
 					justifyContent={"center"}
 				>
 					<Masonry columns={3} spacing={5}>
-						{tripleArray(skills.skillSet.sort(() => Math.random() - 0.5)).map(
-							(skill, index) => (
-								<SkillMasonryItem
-									icon={skill["icon"]}
-									height={skill["height"]}
-									key={index}
-								/>
-							)
-						)}
+						{skillSVGArray.map((skill, index) => (
+							<SkillMasonryItem
+								icon={skill["icon"]}
+								height={skill["height"]}
+								key={index}
+							/>
+						))}
 					</Masonry>
 				</Grid>
 				<Grid
