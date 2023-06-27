@@ -24,7 +24,7 @@ const SectionFader = ({ sectionRef, sectionInView }: any) => {
 			sx={{
 				// backgroundImage: `linear-gradient(#150026, #260037)`,
 				backgroundColor: "#F6F1F1",
-				height: { xs: "20vh", md: "20vh" },
+				height: { xs: "10vh", md: "20vh" },
 				overflowX: "hidden",
 			}}
 		>

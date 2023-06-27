@@ -8,7 +8,7 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import workStackBG from "../assets/backgrounds/projects.png";
 
-export const Projects = ({ inView }: any) => {
+export const Projects = ({ sectionRef, inView }: any) => {
 	const projectItemPadding = 2;
 	const theme = useTheme();
 	const mediumScreen = useMediaQuery(theme.breakpoints.up("md"));
@@ -39,6 +39,7 @@ export const Projects = ({ inView }: any) => {
 			</Snackbar>
 
 			<Grid
+				ref={sectionRef}
 				minHeight={"100vh"}
 				container
 				direction={{ md: "row", xs: "column" }}
@@ -68,7 +69,7 @@ export const Projects = ({ inView }: any) => {
 							transform: { md: "rotate(-90deg)" },
 							// textShadow: "0.05em 0.05em 0.5em black",
 							fontSize: { xs: "3em", md: "3.5em", lg: "5em" },
-							marginBottom: { xs: "1em", md: 0 },
+							marginY: { xs: "1em", md: 0 },
 						}}
 					>
 						Projects

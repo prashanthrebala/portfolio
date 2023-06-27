@@ -5,14 +5,14 @@ import { useInView } from "react-intersection-observer";
 
 export const ProjectSection = () => {
 	const { ref, inView } = useInView({
-		threshold: 1,
+		threshold: 0.5,
 		triggerOnce: true,
 	});
 
 	return (
 		<>
-			<SectionFader sectionRef={ref} sectionInView={inView} />
-			<Projects inView={inView} />
+			<SectionFader sectionInView={inView} />
+			<Projects sectionRef={ref} inView={inView} />
 		</>
 	);
 };
@@ -20,7 +20,6 @@ export const ProjectSection = () => {
 const SectionFader = ({ sectionRef, sectionInView }: any) => {
 	return (
 		<Box
-			ref={sectionRef}
 			sx={{
 				// backgroundImage: `linear-gradient(#260037, #371148)`,
 				backgroundColor: "#F6F1F1",
