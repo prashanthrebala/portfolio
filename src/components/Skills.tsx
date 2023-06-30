@@ -131,7 +131,6 @@ export const Skills = () => {
 					</Masonry>
 				</Grid>
 			</Grid>
-			;
 		</Grid>
 	);
 };
