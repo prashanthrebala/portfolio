@@ -11,7 +11,7 @@ export const ArticleSummarizr = () => {
 			backgroundSize={"cover"}
 			backgroundPosition={"top"}
 			backgroundColor={"#9b59b6"}
-			targetLink="https://github.com/prashanthrebala/Article-Summarizr"
+			targetLink="https://summarizr.rusherrg.tech/"
 		>
 			<Box
 				display={"flex"}
