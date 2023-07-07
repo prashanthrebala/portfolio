@@ -1,4 +1,4 @@
-import { Grid, Link, Tooltip } from "@mui/material";
+import { Grid, Link, Tooltip, useTheme } from "@mui/material";
 import { AiOutlineGithub, AiFillYoutube } from "react-icons/ai";
 import { TbWorldWww } from "react-icons/tb";
 import { RiArticleLine } from "react-icons/ri";
@@ -11,6 +11,7 @@ interface LinkGridItem {
 }
 
 const LinkGridItem = ({ title, targetLink, children }: LinkGridItem) => {
+	const theme = useTheme();
 	return targetLink ? (
 		<Tooltip title={title}>
 			<Link
@@ -20,7 +21,19 @@ const LinkGridItem = ({ title, targetLink, children }: LinkGridItem) => {
 				underline="none"
 				color="inherit"
 			>
-				<Grid item>{children}</Grid>
+				<Grid
+					item
+					sx={{
+						transition: "transform 0.3s",
+						[theme.breakpoints.up("md")]: {
+							"&:hover": {
+								transform: "scale(1.3)",
+							},
+						},
+					}}
+				>
+					{children}
+				</Grid>
 			</Link>
 		</Tooltip>
 	) : null;
@@ -35,12 +48,7 @@ const ProjectLinks = ({
 	const ITEM_SIZE = 25;
 	const DISABLED_COLOR = "#5A5A5A";
 	return (
-		<Grid
-			container
-			display={{ xs: "none", md: "flex" }}
-			justifyContent={"center"}
-			gap={2}
-		>
+		<Grid container display={"flex"} justifyContent={"center"} gap={2}>
 			<LinkGridItem targetLink={liveSiteLink} title={"View site"}>
 				<TbWorldWww size={ITEM_SIZE} />
 			</LinkGridItem>
