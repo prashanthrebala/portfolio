@@ -2,8 +2,14 @@ import { Grid, Link } from "@mui/material";
 import { AiOutlineGithub, AiFillYoutube } from "react-icons/ai";
 import { TbWorldWww } from "react-icons/tb";
 import { RiArticleLine } from "react-icons/ri";
+import { ProjectLinkProps } from "../interfaces/interfaces";
 
-const LinkGridItem = ({ targetLink, children }: any) => {
+interface LinkGridItem {
+	children: React.ReactNode;
+	targetLink?: string;
+}
+
+const LinkGridItem = ({ targetLink, children }: LinkGridItem) => {
 	return targetLink ? (
 		<Link
 			href={targetLink}
@@ -22,7 +28,7 @@ const ProjectLinks = ({
 	githubLink,
 	youtubeLink,
 	paperLink,
-}: any) => {
+}: ProjectLinkProps) => {
 	const ITEM_SIZE = 25;
 	const DISABLED_COLOR = "#5A5A5A";
 	return (

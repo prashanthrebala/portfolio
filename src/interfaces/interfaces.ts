@@ -6,7 +6,6 @@ interface ProjectItemProps {
 	backgroundPosition?: string;
 	backgroundSize?: string;
 	children?: React.ReactNode;
-	targetLink?: string;
 }
 
 interface SkillMasonryItemProps {
@@ -29,4 +28,16 @@ interface WorkItemProps {
 	skills: string[];
 }
 
-export type { ProjectItemProps, SkillMasonryItemProps, WorkItemProps };
+interface ProjectLinkProps {
+	liveSiteLink?: string;
+	githubLink?: string;
+	youtubeLink?: string;
+	paperLink?: string;
+}
+
+export type {
+	ProjectItemProps,
+	SkillMasonryItemProps,
+	WorkItemProps,
+	ProjectLinkProps,
+};
