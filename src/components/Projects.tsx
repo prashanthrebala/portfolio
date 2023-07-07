@@ -3,6 +3,7 @@ import { Grid, Typography, Alert, Snackbar } from "@mui/material";
 import { ProjectItem } from "./ProjectItem";
 import { HandJutsu } from "./Projects/HandJutsu";
 import { ArticleSummarizr } from "./Projects/ArticleSummarizr";
+import { JustBreathe } from "./Projects/JustBreathe";
 import { GitHub } from "./Projects/GitHub";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -84,11 +85,11 @@ export const Projects = ({ sectionRef, inView }: any) => {
 				>
 					<Grid container item direction={"column"} md={4} xs={12}>
 						<Grid item md={8} xs={12} padding={projectItemPadding}>
-							<ProjectItem backgroundColor={"#2980b9"} />
+							<ArticleSummarizr />
 						</Grid>
 
 						<Grid item md={4} xs={12} padding={projectItemPadding}>
-							<ArticleSummarizr />
+							<HandJutsu />
 						</Grid>
 					</Grid>
 					<Grid container item direction={"column"} md={8} xs={12}>
@@ -110,7 +111,7 @@ export const Projects = ({ sectionRef, inView }: any) => {
 								xs={12}
 							>
 								<Grid item md={6} xs={12} padding={projectItemPadding}>
-									<HandJutsu />
+									<JustBreathe />
 								</Grid>
 								<Grid item md={6} xs={12} padding={projectItemPadding}>
 									<GitHub />

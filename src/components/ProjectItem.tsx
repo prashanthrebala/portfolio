@@ -29,7 +29,7 @@ export const ProjectItem = (props: ProjectItemProps) => {
 				justifyContent: "center",
 				alignItems: "center",
 				// safe to freely increase xs value
-				minHeight: { xs: "20vh", md: "auto" },
+				minHeight: { xs: "28vh", md: "auto" },
 				overflow: "hidden",
 				position: "relative",
 				boxSizing: "border-box",
