@@ -1,7 +1,7 @@
 import { ProjectItem } from "../ProjectItem";
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import background from "../../assets/backgrounds/handjutsu.png";
-// import { AiOutlineGithub, AiFillYoutube } from "react-icons/ai";
+import ProjectLinks from "../ProjectLinks";
 
 export const HandJutsu = () => {
 	return (
@@ -10,7 +10,6 @@ export const HandJutsu = () => {
 			backgroundSize={"cover"}
 			backgroundPosition={"center"}
 			backgroundColor={"#E67E22"}
-			targetLink="https://github.com/prashanthrebala/HandJutsu"
 		>
 			<Box
 				display={"flex"}
@@ -40,19 +39,12 @@ export const HandJutsu = () => {
 					Deep learning project facilitating sign language communication through
 					text conversion.
 				</Typography>
-				{/* <Grid
-					container
-					display={{ xs: "none", md: "flex" }}
-					justifyContent={"center"}
-					gap={2}
-				>
-					<Grid item>
-						<AiOutlineGithub size={30} />
-					</Grid>
-					<Grid item>
-						<AiFillYoutube size={30} color="#5A5A5A" />
-					</Grid>
-				</Grid> */}
+				<ProjectLinks
+					githubLink={"https://github.com/prashanthrebala/HandJutsu"}
+					paperLink={
+						"https://drive.google.com/file/d/1RAVn4hp5txUHPJxbaL4Il94IS16Dhbku/view"
+					}
+				/>
 			</Box>
 		</ProjectItem>
 	);
