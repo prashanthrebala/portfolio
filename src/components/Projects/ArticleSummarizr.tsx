@@ -1,8 +1,7 @@
 import { ProjectItem } from "../ProjectItem";
-import { Box, Typography, Grid } from "@mui/material";
-// import { AiOutlineGithub, AiFillYoutube } from "react-icons/ai";
-
+import { Box, Typography } from "@mui/material";
 import background from "../../assets/backgrounds/summarizr.png";
+import ProjectLinks from "../ProjectLinks";
 
 export const ArticleSummarizr = () => {
 	return (
@@ -11,7 +10,6 @@ export const ArticleSummarizr = () => {
 			backgroundSize={"cover"}
 			backgroundPosition={"top"}
 			backgroundColor={"#9b59b6"}
-			targetLink="https://summarizr.rusherrg.tech/"
 		>
 			<Box
 				display={"flex"}
@@ -38,19 +36,10 @@ export const ArticleSummarizr = () => {
 					This website utilizes RapidAPI to extract and summarize article
 					content using GPT.
 				</Typography>
-				{/* <Grid
-					container
-					display={{ xs: "none", md: "flex" }}
-					justifyContent={"center"}
-					gap={2}
-				>
-					<Grid item>
-						<AiOutlineGithub size={30} />
-					</Grid>
-					<Grid item>
-						<AiFillYoutube size={30} color="#5A5A5A" />
-					</Grid>
-				</Grid> */}
+				<ProjectLinks
+					liveSiteLink={"https://summarizr.rusherrg.tech/"}
+					githubLink={"https://github.com/prashanthrebala/Article-Summarizr"}
+				/>
 			</Box>
 		</ProjectItem>
 	);
