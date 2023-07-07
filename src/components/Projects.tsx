@@ -88,7 +88,7 @@ export const Projects = ({ sectionRef, inView }: any) => {
 						</Grid>
 
 						<Grid item md={4} xs={12} padding={projectItemPadding}>
-							<HandJutsu />
+							<ArticleSummarizr />
 						</Grid>
 					</Grid>
 					<Grid container item direction={"column"} md={8} xs={12}>
@@ -110,7 +110,7 @@ export const Projects = ({ sectionRef, inView }: any) => {
 								xs={12}
 							>
 								<Grid item md={6} xs={12} padding={projectItemPadding}>
-									<ArticleSummarizr />
+									<HandJutsu />
 								</Grid>
 								<Grid item md={6} xs={12} padding={projectItemPadding}>
 									<GitHub />
