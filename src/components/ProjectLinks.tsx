@@ -1,25 +1,28 @@
-import { Grid, Link } from "@mui/material";
+import { Grid, Link, Tooltip } from "@mui/material";
 import { AiOutlineGithub, AiFillYoutube } from "react-icons/ai";
 import { TbWorldWww } from "react-icons/tb";
 import { RiArticleLine } from "react-icons/ri";
 import { ProjectLinkProps } from "../interfaces/interfaces";
 
 interface LinkGridItem {
+	title: string;
 	children: React.ReactNode;
 	targetLink?: string;
 }
 
-const LinkGridItem = ({ targetLink, children }: LinkGridItem) => {
+const LinkGridItem = ({ title, targetLink, children }: LinkGridItem) => {
 	return targetLink ? (
-		<Link
-			href={targetLink}
-			target="_blank"
-			rel="noopener noreferrer"
-			underline="none"
-			color="inherit"
-		>
-			<Grid item>{children}</Grid>
-		</Link>
+		<Tooltip title={title}>
+			<Link
+				href={targetLink}
+				target="_blank"
+				rel="noopener noreferrer"
+				underline="none"
+				color="inherit"
+			>
+				<Grid item>{children}</Grid>
+			</Link>
+		</Tooltip>
 	) : null;
 };
 
@@ -38,16 +41,16 @@ const ProjectLinks = ({
 			justifyContent={"center"}
 			gap={2}
 		>
-			<LinkGridItem targetLink={liveSiteLink}>
+			<LinkGridItem targetLink={liveSiteLink} title={"View site"}>
 				<TbWorldWww size={ITEM_SIZE} />
 			</LinkGridItem>
-			<LinkGridItem targetLink={githubLink}>
+			<LinkGridItem targetLink={githubLink} title={"View Source Code"}>
 				<AiOutlineGithub size={ITEM_SIZE} />
 			</LinkGridItem>
-			<LinkGridItem targetLink={youtubeLink}>
+			<LinkGridItem targetLink={youtubeLink} title={"View Video"}>
 				<AiFillYoutube size={ITEM_SIZE} />
 			</LinkGridItem>
-			<LinkGridItem targetLink={paperLink}>
+			<LinkGridItem targetLink={paperLink} title={"View Paper"}>
 				<RiArticleLine size={ITEM_SIZE} />
 			</LinkGridItem>
 		</Grid>
