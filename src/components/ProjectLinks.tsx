@@ -40,12 +40,13 @@ const LinkGridItem = ({ title, targetLink, children }: LinkGridItem) => {
 };
 
 const ProjectLinks = ({
+	iconSize,
 	liveSiteLink,
 	githubLink,
 	youtubeLink,
 	paperLink,
 }: ProjectLinkProps) => {
-	const ITEM_SIZE = 25;
+	const ITEM_SIZE = iconSize ?? 25;
 	const DISABLED_COLOR = "#5A5A5A";
 	return (
 		<Grid container display={"flex"} justifyContent={"center"} gap={2}>

@@ -29,6 +29,7 @@ interface WorkItemProps {
 }
 
 interface ProjectLinkProps {
+	iconSize?: number;
 	liveSiteLink?: string;
 	githubLink?: string;
 	youtubeLink?: string;
