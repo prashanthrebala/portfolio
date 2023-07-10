@@ -12,7 +12,7 @@ interface BreakpointsContextProps {
 
 const BreakpointsContext = createContext<BreakpointsContextProps | null>(null);
 
-export function BreakpointsProvider({ children }: { children: ReactNode }) {
+function BreakpointsProvider({ children }: { children: ReactNode }) {
 	const theme = useTheme();
 	const xsScreen = useMediaQuery(theme.breakpoints.up("xs"));
 	const smScreen = useMediaQuery(theme.breakpoints.up("sm"));
@@ -34,3 +34,5 @@ export function BreakpointsProvider({ children }: { children: ReactNode }) {
 		</BreakpointsContext.Provider>
 	);
 }
+
+export { BreakpointsContext, BreakpointsProvider };
