@@ -10,7 +10,13 @@ interface BreakpointsContextProps {
 	xlScreen: boolean;
 }
 
-const BreakpointsContext = createContext<BreakpointsContextProps | null>(null);
+const BreakpointsContext = createContext<BreakpointsContextProps>({
+	xsScreen: false,
+	smScreen: false,
+	mdScreen: false,
+	lgScreen: false,
+	xlScreen: false,
+});
 
 function BreakpointsProvider({ children }: { children: ReactNode }) {
 	const theme = useTheme();
@@ -20,16 +26,16 @@ function BreakpointsProvider({ children }: { children: ReactNode }) {
 	const lgScreen = useMediaQuery(theme.breakpoints.up("lg"));
 	const xlScreen = useMediaQuery(theme.breakpoints.up("xl"));
 
-	const breakpointsData: BreakpointsContextProps = {
-		xsScreen,
-		smScreen,
-		mdScreen,
-		lgScreen,
-		xlScreen,
-	};
-
 	return (
-		<BreakpointsContext.Provider value={breakpointsData}>
+		<BreakpointsContext.Provider
+			value={{
+				xsScreen,
+				smScreen,
+				mdScreen,
+				lgScreen,
+				xlScreen,
+			}}
+		>
 			{children}
 		</BreakpointsContext.Provider>
 	);
