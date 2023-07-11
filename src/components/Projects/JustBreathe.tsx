@@ -17,8 +17,8 @@ export const JustBreathe = () => {
 				color={"#F2F2F2"}
 			>
 				<Typography
-					fontFamily={"Roboto"}
-					fontWeight={500}
+					fontFamily={"Segoe Script"}
+					fontWeight={600}
 					fontSize={{ xs: "1.6em", sm: "2.4em", md: "1.2em", lg: "2em" }}
 				>
 					Just Breathe
