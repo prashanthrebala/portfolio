@@ -1,18 +1,16 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Grid, Typography, Alert, Snackbar } from "@mui/material";
 import { ProjectItem } from "./ProjectItem";
 import { HandJutsu } from "./Projects/HandJutsu";
 import { ArticleSummarizr } from "./Projects/ArticleSummarizr";
 import { JustBreathe } from "./Projects/JustBreathe";
 import { GitHub } from "./Projects/GitHub";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import { BreakpointsContext } from "../contexts/BreakpointsContext";
 import workStackBG from "../assets/backgrounds/projects.png";
 
 export const Projects = ({ sectionRef, inView }: any) => {
 	const projectItemPadding = 2;
-	const theme = useTheme();
-	const mediumScreen = useMediaQuery(theme.breakpoints.up("md"));
+	const { mdScreen } = useContext(BreakpointsContext);
 	const [snackbarOpen, setSnackbarOpen] = useState(true);
 
 	const handleCloseSnackbar = () => {
@@ -98,7 +96,7 @@ export const Projects = ({ sectionRef, inView }: any) => {
 						</Grid>
 
 						<Grid container item md={8} xs={12}>
-							{mediumScreen && (
+							{mdScreen && (
 								<Grid item md={6} xs={12} padding={projectItemPadding}>
 									<ProjectItem backgroundColor={"#2ecc71"} />
 								</Grid>

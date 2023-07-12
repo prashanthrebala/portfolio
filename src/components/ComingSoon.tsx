@@ -1,16 +1,15 @@
+import { useContext } from "react";
+import { BreakpointsContext } from "../contexts/BreakpointsContext";
 import { Divider, Grid, Zoom, Typography } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 import { ImBooks } from "react-icons/im";
 import { BsYoutube } from "react-icons/bs";
 import { CiCircleMore } from "react-icons/ci";
 import { IoLogoInstagram } from "react-icons/io";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
 
 export const ComingSoon = () => {
 	const { ref, inView } = useInView({ threshold: 0.8, triggerOnce: true });
-	const theme = useTheme();
-	const mediumScreen = useMediaQuery(theme.breakpoints.up("md"));
+	const { mdScreen } = useContext(BreakpointsContext);
 
 	return (
 		<Grid
@@ -50,19 +49,19 @@ export const ComingSoon = () => {
 				alignItems={"center"}
 			>
 				<ComingSoonGridItem inView={inView}>
-					<ImBooks size={mediumScreen ? 120 : 80} />
+					<ImBooks size={mdScreen ? 120 : 80} />
 					Education
 				</ComingSoonGridItem>
 				<ComingSoonGridItem inView={inView}>
-					<IoLogoInstagram size={mediumScreen ? 120 : 80} />
+					<IoLogoInstagram size={mdScreen ? 120 : 80} />
 					Instagram
 				</ComingSoonGridItem>
 				<ComingSoonGridItem inView={inView}>
-					<BsYoutube size={mediumScreen ? 120 : 80} />
+					<BsYoutube size={mdScreen ? 120 : 80} />
 					YouTube
 				</ComingSoonGridItem>
 				<ComingSoonGridItem inView={inView}>
-					<CiCircleMore size={mediumScreen ? 120 : 80} />
+					<CiCircleMore size={mdScreen ? 120 : 80} />
 					Other
 				</ComingSoonGridItem>
 			</Grid>

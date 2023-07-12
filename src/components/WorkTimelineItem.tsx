@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { Box, Typography, Stack, Divider, Slide, Chip } from "@mui/material";
 import { WorkItemProps } from "../interfaces/interfaces";
 import TimelineItem from "@mui/lab/TimelineItem";
@@ -7,25 +8,22 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import { useInView } from "react-intersection-observer";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import codeBracket from "../assets/code_bracket.png";
+import { BreakpointsContext } from "../contexts/BreakpointsContext";
 
 export const WorkTimelineItem = (props: { experience: WorkItemProps }) => {
 	const { experience } = props;
 	const { company, title, dates, from_date, to_date, duration } = experience;
 	const { image, skills, description } = experience;
-
-	const theme = useTheme();
-	const mediumScreen = useMediaQuery(theme.breakpoints.up("md"));
+	const { mdScreen } = useContext(BreakpointsContext);
 	const { ref, inView } = useInView({
-		threshold: mediumScreen ? 0.5 : 0.1,
+		threshold: mdScreen ? 0.5 : 0.1,
 		triggerOnce: true,
 	});
 
 	return (
 		<TimelineItem ref={ref}>
-			{mediumScreen && (
+			{mdScreen && (
 				<TimelineOppositeContent
 					sx={{ opacity: inView ? 1 : 0, transition: "opacity 0.5s" }}
 				>
@@ -75,7 +73,7 @@ export const WorkTimelineItem = (props: { experience: WorkItemProps }) => {
 							fontSize={{ xs: "0.75em", sm: "0.875rem" }}
 							textAlign={"center"}
 						>
-							{mediumScreen ? duration : dates}
+							{mdScreen ? duration : dates}
 						</Typography>
 					</Stack>
 					<Box
@@ -125,11 +123,10 @@ export const WorkTimelineItem = (props: { experience: WorkItemProps }) => {
 };
 
 export const EmptyWorkTimelineItem = () => {
-	const theme = useTheme();
-	const mediumScreen = useMediaQuery(theme.breakpoints.up("md"));
+	const { mdScreen } = useContext(BreakpointsContext);
 	return (
 		<TimelineItem>
-			{mediumScreen && <TimelineOppositeContent />}
+			{mdScreen && <TimelineOppositeContent />}
 			<TimelineSeparator>
 				<TimelineDot sx={{ backgroundColor: "#dedede" }}>
 					<Box

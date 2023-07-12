@@ -1,14 +1,12 @@
+import { useContext } from "react";
 import { ProjectItem } from "../ProjectItem";
 import { Box, Typography } from "@mui/material";
 import background from "../../assets/backgrounds/summarizr.png";
 import ProjectLinks from "../ProjectLinks";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import { BreakpointsContext } from "../../contexts/BreakpointsContext";
 
 export const ArticleSummarizr = () => {
-	const theme = useTheme();
-	const mediumScreen = useMediaQuery(theme.breakpoints.up("md"));
-	const largeScreen = useMediaQuery(theme.breakpoints.up("lg"));
+	const { mdScreen, lgScreen } = useContext(BreakpointsContext);
 	return (
 		<ProjectItem
 			backgroundImage={`url(${background})`}
@@ -43,12 +41,12 @@ export const ArticleSummarizr = () => {
 					fontSize={{ xs: "1em", md: "0.8em", lg: "0.9em" }}
 					sx={{ textShadow: "0.1em 0.1em 0.2em black" }}
 				>
-					{mediumScreen
+					{mdScreen
 						? `The Article Summarizr web app simplifies article summarization. Powered by the Article Extractor and Summarizer RapidAPI, it allows you to effortlessly summarize articles by pasting the content or document link on the website, providing a concise summary within a minute.`
 						: `This website utilizes RapidAPI to extract and summarize article content using GPT.`}
 				</Typography>
 				<ProjectLinks
-					iconSize={largeScreen ? 35 : undefined}
+					iconSize={lgScreen ? 35 : undefined}
 					liveSiteLink={"https://summarizr.rusherrg.tech/"}
 					githubLink={"https://github.com/prashanthrebala/Article-Summarizr"}
 				/>
