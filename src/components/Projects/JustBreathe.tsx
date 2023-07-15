@@ -7,7 +7,7 @@ export const JustBreathe = () => {
 		<ProjectItem
 			backgroundSize={"cover"}
 			backgroundPosition={"top"}
-			backgroundColor={"#2980b9"}
+			backgroundImage={"radial-gradient(#1B9CFC, #182C61)"}
 		>
 			<Box
 				display={"flex"}
