@@ -8,20 +8,26 @@ import { ComingSoon } from "./components/ComingSoon";
 import { Box } from "@mui/material";
 import { ProjectSection } from "./components/ProjectSection";
 import { BreakpointsProvider } from "./contexts/BreakpointsContext";
+import MidWrapper from "./components/MidWrapper";
 
 function App() {
 	// create intersection observers here to animate section to section transitions
 	// https://colorhunt.co/palette/f6f1f1afd3e219a7ce146c94
 	return (
 		<BreakpointsProvider>
-			<Intro />
-			<WorkExperience />
-			<ProjectSection />
-			<Box
-				sx={{ backgroundColor: "#F6F1F1", height: { xs: "10vh", md: "20vh" } }}
-			/>
-			<Skills />
-			<ComingSoon />
+			<MidWrapper>
+				<Intro />
+				<WorkExperience />
+				<ProjectSection />
+				<Box
+					sx={{
+						backgroundColor: "#F6F1F1",
+						height: { xs: "10vh", md: "20vh" },
+					}}
+				/>
+				<Skills />
+				<ComingSoon />
+			</MidWrapper>
 		</BreakpointsProvider>
 	);
 }
