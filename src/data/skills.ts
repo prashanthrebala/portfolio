@@ -18,6 +18,8 @@ import nextjs from "../assets/nextjs.svg";
 import docker from "../assets/docker.svg";
 import kubernetes from "../assets/kubernetes.svg";
 import prisma from "../assets/prisma.svg";
+import fastapi from "../assets/fastapi.svg";
+import vue from "../assets/vue.svg";
 
 export const skills = {
 	skillSet: [
@@ -121,18 +123,30 @@ export const skills = {
 			icon: prisma,
 			height: "4rem",
 		},
+		{
+			name: "VueJs",
+			icon: vue,
+			height: "5rem",
+		},
+		{
+			name: "FastAPI",
+			icon: fastapi,
+			height: "5rem",
+		},
 	],
 	categories: [
 		{
 			title: "Web Development",
 			items: [
-				"React",
-				"NextJS",
-				"TypeScript",
 				"Node.js",
+				"React",
+				"Next.js",
+				"FastAPI",
+				"TypeScript",
 				"Express",
 				"Angular",
-				"Tailwind",
+				"Vue.js",
+				"Tailwind CSS",
 				"HTML / CSS / JS",
 			],
 		},
