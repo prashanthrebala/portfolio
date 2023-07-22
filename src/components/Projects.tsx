@@ -4,6 +4,7 @@ import { ProjectItem } from "./ProjectItem";
 import { HandJutsu } from "./Projects/HandJutsu";
 import { ArticleSummarizr } from "./Projects/ArticleSummarizr";
 import { JustBreathe } from "./Projects/JustBreathe";
+import { Trails } from "./Projects/Trails";
 import { GitHub } from "./Projects/GitHub";
 import { BreakpointsContext } from "../contexts/BreakpointsContext";
 import workStackBG from "../assets/backgrounds/projects.png";
