@@ -13,10 +13,10 @@ export const work_experience = {
 			location: "Bangalore, India",
 			duration: "3 years",
 			description: [
-				"Redesigned Microsoft Teams' Search Results Page to provide more context around search results and enhance the user experience.",
+				"Redesigned Microsoft Teams' Search Results Page, optimizing user experience with comprehensive context, catering to the needs of 8 million daily users. Significantly improved search load speed by 30%, resulting in better search performance.",
+				"Added support for Bing Speller suggestion to Microsoft Teams' Search, optimizing search accuracy and user satisfaction. This enhancement significantly impacts over 1.5 million searches per day.",
 				"Implemented hover actions on search results to enable frequently used functionalities such as Reply-to, Voice/Video Call, and Email resulting in improved user engagement and convenience.",
 				"Utilized various testing frameworks such as Cypress and Protractor to automate end-to-end testing of the entire search experience leading to better development.",
-				"Added support for Bing Speller suggestion to Teams' Search.",
 			],
 			skills: [
 				"React",
