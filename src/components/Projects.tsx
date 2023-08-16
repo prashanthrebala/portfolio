@@ -8,6 +8,7 @@ import { Trails } from "./Projects/Trails";
 import { GitHub } from "./Projects/GitHub";
 import { BreakpointsContext } from "../contexts/BreakpointsContext";
 import workStackBG from "../assets/backgrounds/projects.png";
+import { Illusia } from "./Projects/Illusia";
 
 export const Projects = ({ sectionRef, inView }: any) => {
 	const projectItemPadding = 2;
@@ -93,7 +94,7 @@ export const Projects = ({ sectionRef, inView }: any) => {
 					</Grid>
 					<Grid container item direction={"column"} md={8} xs={12}>
 						<Grid item md={4} xs={12} padding={projectItemPadding}>
-							<ProjectItem backgroundColor={"#e74c3c"} />
+							<Illusia />
 						</Grid>
 
 						<Grid container item md={8} xs={12}>
