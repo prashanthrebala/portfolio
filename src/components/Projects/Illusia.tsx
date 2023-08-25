@@ -1,23 +1,29 @@
 import { useEffect, useState } from "react";
 import { ProjectItem } from "../ProjectItem";
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid, Fade } from "@mui/material";
 import background from "../../assets/backgrounds/illusia-bg-2.jpg";
 import ProjectLinks from "../ProjectLinks";
 import { illusia_posts } from "../../data/illusia";
 
 export const Illusia = () => {
 	const [postIndex, setPostIndex] = useState(0);
+	const [isVisible, setIsVisible] = useState(true);
 	useEffect(() => {
-		const timerId = setInterval(() => {
-			setPostIndex((prevIndex) => (prevIndex + 1) % illusia_posts.length);
-		}, 5000);
-
-		return () => clearInterval(timerId);
-	}, []);
+		if (isVisible) {
+			setTimeout(() => {
+				setIsVisible(false);
+			}, 6500);
+		} else {
+			setTimeout(() => {
+				setIsVisible(true);
+				setPostIndex((postIndex + 1) % illusia_posts.length);
+			}, 300);
+		}
+	}, [isVisible]);
 	return (
 		<ProjectItem
 			backgroundImage={`url(${background})`}
-			backgroundSize={"cover"}
+			backgroundSize={"200%"}
 			backgroundPosition={"top"}
 			backgroundColor={"#E74C3C"}
 		>
@@ -52,9 +58,7 @@ export const Illusia = () => {
 							image generation API
 						</Typography>
 						<ProjectLinks
-							githubLink={
-								"https://github.com/prashanthrebala/Just-Breathe-Fall-2022"
-							}
+							githubLink={"https://github.com/prashanthrebala/Illusia"}
 							youtubeLink={"https://www.youtube.com/watch?v=v_tUXH6Hyg4"}
 						/>
 					</Box>
@@ -64,7 +68,13 @@ export const Illusia = () => {
 					item
 					xs={0}
 					md={6}
-					sx={{ height: "100%", display: "flex", alignItems: "center" }}
+					sx={{
+						height: "100%",
+						display: "flex",
+						alignItems: "center",
+						opacity: isVisible ? 1 : 0, // Apply opacity based on visibility
+						transition: "opacity 0.3s ease-in-out", // Add a transition effect
+					}}
 				>
 					<Grid item xs={6} p={1}>
 						<Box
@@ -86,12 +96,22 @@ export const Illusia = () => {
 							lineHeight: "1.5rem",
 							fontSize: "0.9rem",
 							display: "flex",
-							textAlign: "center",
 							alignItems: "center",
 							paddingX: "1rem",
 						}}
 					>
-						{illusia_posts[postIndex]["description"]}
+						<Typography
+							variant="body2"
+							textAlign={"center"}
+							marginY={1}
+							fontSize={{ xs: "1em", md: "0.8em", lg: "0.9em" }}
+							sx={{
+								backgroundColor: "#000000cc",
+								padding: "0.1rem",
+							}}
+						>
+							{illusia_posts[postIndex]["description"]}
+						</Typography>
 					</Grid>
 				</Grid>
 			</Grid>
