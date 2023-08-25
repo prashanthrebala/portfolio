@@ -43,7 +43,10 @@ export const Illusia = () => {
 							fontFamily={"Bubblegum Sans"}
 							fontWeight={400}
 							letterSpacing={2}
-							fontSize={{ xs: "1.6em", sm: "2.4em", md: "1.2em", lg: "2em" }}
+							fontSize={{ xs: "1.6em", sm: "2.4em", md: "1.2em", lg: "2.4em" }}
+							sx={{
+								textShadow: "0.1rem 0.1rem 0.5rem black",
+							}}
 						>
 							illusia
 						</Typography>
@@ -59,7 +62,6 @@ export const Illusia = () => {
 						</Typography>
 						<ProjectLinks
 							githubLink={"https://github.com/prashanthrebala/Illusia"}
-							youtubeLink={"https://www.youtube.com/watch?v=v_tUXH6Hyg4"}
 						/>
 					</Box>
 				</Grid>
