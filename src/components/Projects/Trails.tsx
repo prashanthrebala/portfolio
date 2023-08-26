@@ -9,10 +9,10 @@ export const Trails = () => {
 	const { mdScreen, lgScreen } = useContext(BreakpointsContext);
 	return (
 		<ProjectItem
-			backgroundImage={`url(${background})`}
+			backgroundImage={"radial-gradient(#03A64A, #025940)"}
 			backgroundSize={"cover"}
 			backgroundPosition={"top"}
-			backgroundColor={"#9b59b6"}
+			backgroundColor={"#03A64A"}
 		>
 			<Box
 				display={"flex"}
@@ -23,7 +23,6 @@ export const Trails = () => {
 				gap={{ lg: 2 }}
 			>
 				<Typography
-					fontFamily={"Passion One"}
 					textAlign={"center"}
 					fontWeight={700}
 					lineHeight={"1.15em"}
@@ -40,7 +39,7 @@ export const Trails = () => {
 					paddingX={{ xs: 2, md: 3 }}
 					lineHeight={{ md: 1.5, lg: 1.75 }}
 					fontSize={{ xs: "1em", md: "0.8em", lg: "0.9em" }}
-					sx={{ textShadow: "0.1em 0.1em 0.2em black" }}
+					// sx={{ textShadow: "0.1em 0.1em 0.2em black" }}
 				>
 					{mdScreen
 						? `Built with NextJS 13, Trails is a social platform for discovering global tourist attractions and exploring fellow travelers' posts. Share your own experiences with the community!`
