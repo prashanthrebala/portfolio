@@ -68,11 +68,10 @@ export const Illusia = () => {
 				<Grid
 					container
 					item
-					xs={0}
 					md={6}
 					sx={{
 						height: "100%",
-						display: "flex",
+						display: { xs: "none", md: "flex" },
 						alignItems: "center",
 						opacity: isVisible ? 1 : 0, // Apply opacity based on visibility
 						transition: "opacity 0.3s ease-in-out", // Add a transition effect
