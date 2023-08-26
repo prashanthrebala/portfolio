@@ -13,15 +13,15 @@ import { Illusia } from "./Projects/Illusia";
 export const Projects = ({ sectionRef, inView }: any) => {
 	const projectItemPadding = 2;
 	const { mdScreen } = useContext(BreakpointsContext);
-	const [snackbarOpen, setSnackbarOpen] = useState(true);
+	// const [snackbarOpen, setSnackbarOpen] = useState(true);
 
-	const handleCloseSnackbar = () => {
-		setSnackbarOpen(false);
-	};
+	// const handleCloseSnackbar = () => {
+	// 	setSnackbarOpen(false);
+	// };
 
 	return (
 		<>
-			<Snackbar
+			{/* <Snackbar
 				open={snackbarOpen && inView}
 				anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
 				autoHideDuration={6000}
@@ -37,7 +37,7 @@ export const Projects = ({ sectionRef, inView }: any) => {
 						section. Feel free to check out my GitHub for other projects!
 					</Typography>
 				</Alert>
-			</Snackbar>
+			</Snackbar> */}
 
 			<Grid
 				ref={sectionRef}
