@@ -1,14 +1,18 @@
 import { useContext } from "react";
 import { BreakpointsContext } from "../contexts/BreakpointsContext";
-import { Divider, Grid, Zoom, Typography } from "@mui/material";
+import { Box, Divider, Grid, Zoom, Typography, Avatar } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 import { ImBooks } from "react-icons/im";
 import { BsYoutube } from "react-icons/bs";
 import { CiCircleMore } from "react-icons/ci";
 import { IoLogoInstagram } from "react-icons/io";
+import instagram from "../assets/images/instagram.jpeg";
+import instagram_logo from "../assets/images/instagram-logo.png";
+import youtube from "../assets/images/youtube.jpeg";
+import youtube_logo from "../assets/images/youtube-logo.png";
 
 export const ComingSoon = () => {
-	const { ref, inView } = useInView({ threshold: 0.8, triggerOnce: true });
+	const { ref, inView } = useInView({ threshold: 0.6, triggerOnce: true });
 	const { mdScreen } = useContext(BreakpointsContext);
 
 	return (
@@ -53,12 +57,52 @@ export const ComingSoon = () => {
 					Education
 				</ComingSoonGridItem>
 				<ComingSoonGridItem inView={inView}>
-					<IoLogoInstagram size={mdScreen ? 120 : 80} />
-					Instagram
+					<Avatar
+						src={instagram}
+						sx={{
+							width: { xs: "5rem", lg: "12rem" },
+							height: { xs: "5rem", lg: "12rem" },
+							border: "0.5em solid #146C94",
+						}}
+					/>
+					{mdScreen ? (
+						<Box
+							sx={{
+								backgroundImage: `url(${instagram_logo})`,
+								backgroundSize: "cover",
+								backgroundRepeat: "no-repeat",
+								backgroundPosition: "center",
+								width: "12rem",
+								height: "4rem",
+							}}
+						/>
+					) : (
+						"Instagram"
+					)}
 				</ComingSoonGridItem>
 				<ComingSoonGridItem inView={inView}>
-					<BsYoutube size={mdScreen ? 120 : 80} />
-					YouTube
+					<Avatar
+						src={youtube}
+						sx={{
+							width: { xs: "5rem", lg: "12rem" },
+							height: { xs: "5rem", lg: "12rem" },
+							border: "0.5em solid #146C94",
+						}}
+					/>
+					{mdScreen ? (
+						<Box
+							sx={{
+								backgroundImage: `url(${youtube_logo})`,
+								backgroundSize: "cover",
+								backgroundRepeat: "no-repeat",
+								backgroundPosition: "center",
+								width: "10rem",
+								height: "3rem",
+							}}
+						/>
+					) : (
+						"YouTube"
+					)}
 				</ComingSoonGridItem>
 				<ComingSoonGridItem inView={inView}>
 					<CiCircleMore size={mdScreen ? 120 : 80} />
@@ -76,7 +120,7 @@ interface ComingSoonGridItemProps {
 
 const ComingSoonGridItem = ({ children, inView }: ComingSoonGridItemProps) => {
 	return (
-		<Zoom in={inView} timeout={1000}>
+		<Zoom in={inView} timeout={400}>
 			<Grid
 				container
 				item
