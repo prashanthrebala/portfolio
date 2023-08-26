@@ -98,11 +98,9 @@ export const Projects = ({ sectionRef, inView }: any) => {
 						</Grid>
 
 						<Grid container item md={8} xs={12}>
-							{mdScreen && (
-								<Grid item md={6} xs={12} padding={projectItemPadding}>
-									<ProjectItem backgroundColor={"#2ecc71"} />
-								</Grid>
-							)}
+							<Grid item md={6} xs={12} padding={projectItemPadding}>
+								<Trails />
+							</Grid>
 							<Grid
 								container
 								item
