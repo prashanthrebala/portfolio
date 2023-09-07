@@ -41,7 +41,12 @@ export const Skills = () => {
 	return (
 		<Grid
 			container
-			sx={{ width: "100%", minHeight: "100vh", backgroundColor: "#F6F1F1" }}
+			sx={{
+				width: "100%",
+				minHeight: "100vh",
+				backgroundColor: "#F6F1F1",
+				paddingY: "4rem",
+			}}
 			direction={"column"}
 			gap={1}
 		>

@@ -19,12 +19,6 @@ function App() {
 				<Intro />
 				<WorkExperience />
 				<ProjectSection />
-				<Box
-					sx={{
-						backgroundColor: "#F6F1F1",
-						height: { xs: "10vh", md: "20vh" },
-					}}
-				/>
 				<Skills />
 				<ComingSoon />
 			</MidWrapper>
