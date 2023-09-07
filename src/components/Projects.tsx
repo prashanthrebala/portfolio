@@ -1,44 +1,16 @@
-import { useState, useContext } from "react";
-import { Grid, Typography, Alert, Snackbar } from "@mui/material";
-import { ProjectItem } from "./ProjectItem";
+import { Grid, Typography } from "@mui/material";
 import { HandJutsu } from "./Projects/HandJutsu";
 import { ArticleSummarizr } from "./Projects/ArticleSummarizr";
 import { JustBreathe } from "./Projects/JustBreathe";
 import { Trails } from "./Projects/Trails";
 import { GitHub } from "./Projects/GitHub";
-import { BreakpointsContext } from "../contexts/BreakpointsContext";
-import workStackBG from "../assets/backgrounds/projects.png";
 import { Illusia } from "./Projects/Illusia";
 
 export const Projects = ({ sectionRef, inView }: any) => {
 	const projectItemPadding = 2;
-	const { mdScreen } = useContext(BreakpointsContext);
-	// const [snackbarOpen, setSnackbarOpen] = useState(true);
-
-	// const handleCloseSnackbar = () => {
-	// 	setSnackbarOpen(false);
-	// };
 
 	return (
 		<>
-			{/* <Snackbar
-				open={snackbarOpen && inView}
-				anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
-				autoHideDuration={6000}
-				onClose={handleCloseSnackbar}
-			>
-				<Alert
-					variant="filled"
-					severity="warning"
-					sx={{ boxShadow: 12, width: { xs: "80%", md: "60%" } }}
-				>
-					<Typography variant="body1">
-						Under construction! I'm working on suitable designs for the projects
-						section. Feel free to check out my GitHub for other projects!
-					</Typography>
-				</Alert>
-			</Snackbar> */}
-
 			<Grid
 				ref={sectionRef}
 				minHeight={"100vh"}
