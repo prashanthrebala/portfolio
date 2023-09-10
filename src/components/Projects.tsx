@@ -6,7 +6,7 @@ import { Trails } from "./Projects/Trails";
 import { GitHub } from "./Projects/GitHub";
 import { Illusia } from "./Projects/Illusia";
 
-export const Projects = ({ sectionRef, inView }: any) => {
+export const Projects = ({ sectionRef }: any) => {
 	const projectItemPadding = 2;
 
 	return (
@@ -17,12 +17,10 @@ export const Projects = ({ sectionRef, inView }: any) => {
 				container
 				direction={{ md: "row", xs: "column" }}
 				sx={{
-					// backgroundImage: `url(${workStackBG})`,
 					scrollSnapAlign: "start",
 					backgroundColor: "#E6E1E1",
 					position: "relative",
 					backgroundSize: "auto 100%",
-					// backgroundRepeat: "no-repeat",
 				}}
 				padding={projectItemPadding}
 			>
@@ -36,13 +34,11 @@ export const Projects = ({ sectionRef, inView }: any) => {
 					sx={{ backgroundColor: "rgba(#000, 0)" }}
 				>
 					<Typography
-						fontFamily={"Tillana"}
-						// fontFamily={"Roboto"}
-						// fontWeight={"300"}
+						fontWeight={"300"}
 						sx={{
 							transform: { md: "rotate(-90deg)" },
 							// textShadow: "0.05em 0.05em 0.5em black",
-							fontSize: { xs: "3em", md: "3.5em", lg: "5em" },
+							fontSize: { xs: "3em", md: "3.5em", lg: "6em" },
 							marginY: { xs: "1em", md: 0 },
 						}}
 					>
