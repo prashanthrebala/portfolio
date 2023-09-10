@@ -18,6 +18,7 @@ export const Projects = ({ sectionRef, inView }: any) => {
 				direction={{ md: "row", xs: "column" }}
 				sx={{
 					// backgroundImage: `url(${workStackBG})`,
+					scrollSnapAlign: "start",
 					backgroundColor: "#E6E1E1",
 					position: "relative",
 					backgroundSize: "auto 100%",
