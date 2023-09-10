@@ -42,6 +42,7 @@ export const Skills = () => {
 		<Grid
 			container
 			sx={{
+				scrollSnapAlign: "start",
 				width: "100%",
 				minHeight: "100vh",
 				backgroundColor: "#F6F1F1",
