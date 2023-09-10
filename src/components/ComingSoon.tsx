@@ -20,6 +20,7 @@ export const ComingSoon = () => {
 			ref={ref}
 			container
 			sx={{
+				scrollSnapAlign: "start",
 				minHeight: "100vh",
 				backgroundColor: "#146C94",
 				display: "flex",
