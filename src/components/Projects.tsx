@@ -17,7 +17,7 @@ export const Projects = ({ sectionRef }: any) => {
 				container
 				direction={{ md: "row", xs: "column" }}
 				sx={{
-					scrollSnapAlign: "start",
+					scrollSnapAlign: { xs: "none", md: "start" },
 					backgroundColor: "#E6E1E1",
 					position: "relative",
 					backgroundSize: "auto 100%",
